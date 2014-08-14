@@ -700,7 +700,7 @@ to execute the command.
 
 \item[walk:] A term we use to describe the notion of visiting
 the entire tree of directories, sub-directories, sub-sub-directories, 
-until we have visited the all of the directories.  We call this
+until we have visited all of the directories. We call this
 ``walking the directory tree''.
 \index{walk}
 
@@ -723,11 +723,11 @@ these duplicates.
 
 \item Write a program that walks a directory and all of its
 sub-directories for all files with a given suffix (like {\tt .mp3})
-and lists pairs of files with that are the same size.
+and lists pairs of files that are the same size.
 Hint: Use a dictionary where the key of the dictionary is the size
 of the file from {\tt  os.path.getsize} and the value in the 
 dictionary is the path name concatenated with the file name.  
-As you encounter each file check to see if you already have a
+As you encounter each file, check to see if you already have a
 file that has the same size as the current file.  
 If so, you have a duplicate
 size file and print out the file size and the two files names 
@@ -776,7 +776,7 @@ from a run in a folder of image files:
 \end{verbatim}
 \afterverb
 %
-Apparently I sometimes sent the same photo more than once 
+Apparently, I sometimes sent the same photo more than once 
 or made a copy of a photo from time to time without deleting
 the original.
 
