@@ -28,7 +28,7 @@ To produce the HTML version of the book you type:
 This produces files in the *html* folder.  This folder contains the book, chapters in
 HTML and the images for the book.  
 
-To make EPUB or MOBI files I use the Calibre software.  The steps that I take in Caliper
+To make EPUB or MOBI files I use the Calibre software.  The steps that I take in Calibre
 are here:
 
 * [Importing HTML into Calibre](CALIBRE.md)
