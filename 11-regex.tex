@@ -35,7 +35,7 @@ We open the file, loop through each line and use the regular expression {\tt sea
 
 The power of the regular expressions comes when we add to special characters to the search string that allow us to more precisely control which lines match the string.  Adding these special characters to our regular expression allow us to do sophisticated matching and extraction while writing very little code.
 
-For example, the caret character is uses in regular 
+For example, the caret character is used in regular 
 expressions to match ``the beginning'' of a line.
 We could change our application to only match 
 lines where ``From:'' was at the beginning of the line as follows:
@@ -250,7 +250,7 @@ X-DSPAM-Probability: 0.0000
 \end{verbatim}
 \afterverb
 %
-We don't just want any floating point numbers from any lines.  We only to extract numbers from lines that have the above syntax.
+We don't just want any floating point numbers from any lines.  We only want to extract numbers from lines that have the above syntax.
 
 We can construct the following regular expression to select the lines:
 
@@ -260,7 +260,7 @@ We can construct the following regular expression to select the lines:
 \end{verbatim}
 \afterverb
 %
-Translating this, we are saying, we want lines that start with ``X-'' followed by zero or more characters ``.*'' followed by a colon (``:'') and then a space.  After the space we are looking for one or more characters that are either a digit (0-9) or a period ``[0-9.]+''.  Note that in between the square braces, the period matches an actual period (i.e. it is not a wildcard between the square brackets).
+Translating this, we are saying, we want lines that start with ``X-'' followed by zero or more characters ``.*'' followed by a colon (``:'') and then a space.  After the space, we are looking for one or more characters that are either a digit (0-9) or a period ``[0-9.]+''.  Note that in between the square braces, the period matches an actual period (i.e. it is not a wildcard between the square brackets).
 
 This is a very tight expression that will pretty much match only the lines we are interested in as follows:
 
@@ -324,7 +324,7 @@ The output from this program is as follows:
 \end{verbatim}
 \afterverb
 %
-The numbers are still in a list and need to be converted from strings to floating point but we have used the power of regular expressions to both search and extract the information we found interesting.
+The numbers are still in a list and need to be converted from strings to floating point, but we have used the power of regular expressions to both search and extract the information we found interesting.
 
 As another example of this technique, if 
 you look at the file there are a number of lines of the form:
