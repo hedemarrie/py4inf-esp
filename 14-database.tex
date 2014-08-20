@@ -316,7 +316,7 @@ SELECT * FROM Tracks WHERE title = 'My Way'
 Using \verb"*" indicates that you want the database to return all of 
 the columns for each row that matches the {\tt WHERE} clause.  
 
-Note, unlike in Python, in a SQL {\tt WHERE} clause 
+Note, unlike in Python, in an SQL {\tt WHERE} clause 
 we use a single equal sign 
 to indicate a test for equality rather than a double equal sign.
 Other logical operations allowed in a {\tt WHERE} clause include 
@@ -752,8 +752,8 @@ using this key.
 In practical terms, a string takes up a lot more 
 space than an integer on the disk
 and in the memory of our computer and takes more processor time
-to compare and sort.  If we only have a few hundred entries 
-the storage and processor time hardly matters.  But if we have 
+to compare and sort.  If we only have a few hundred entries, 
+the storage and processing time hardly matters.  But if we have 
 a million people in our database and a possibility of 100 million
 friend links, it is important to be able to scan data as quickly
 as possible.
@@ -912,8 +912,7 @@ using integer keys to link tables. The basic patterns are:
 \item Creating tables with primary keys and constraints.
 
 \item When we have a logical key for a person (i.e. account
-name) and we need the {\tt id} value for the person.
-Depending on whether or not the person is already
+name) and we need the {\tt id} value for the person, depending on whether or not the person is already
 in the {\tt People} table, we either need to: 
 (1) look up the person in the {\tt People} table and 
 retrieve the {\tt id} value for the person 
@@ -930,8 +929,8 @@ We will cover each of these in turn.
 
 As we design our table structures, we can tell the database system 
 that we would like it to enforce a few rules on us.   These rules
-help us from making mistakes and introducing incorrect data into 
-out tables.   When we create our tables:
+keep us from making mistakes and introducing incorrect data into 
+our tables.   When we create our tables:
 
 \beforeverb
 \begin{verbatim}
@@ -1176,7 +1175,7 @@ The {\tt JOIN} clause indicates that the fields we are selecting
 cross both the {\tt Follows} and {\tt People} tables.  The {\tt ON}
 clause indicates how the two tables are to be joined.   Take the rows
 from {\tt Follows} and append the row from {\tt People} where the
-field \verb"from_id" in {\tt Follows} is the same the {\tt id} value
+field \verb"from_id" in {\tt Follows} is the same {\tt id} value
 in the {\tt People} table.
 
 \beforefig
@@ -1307,12 +1306,11 @@ You must be careful because SQLite takes care to keep two programs
 from changing the same data at the same time.   For example, if
 you open a database in the browser and make a change to the database
 and have not yet pressed the ``save'' button in the browser, the 
-browser ``locks'' the database file and keeping any other program
+browser ``locks'' the database file keeping any other program
 from accessing the file.  In particular, your Python program
 will not be able to access the file if it is locked.
 
-So a solution is to make sure to either close the database browser 
-or use the {\bf File} menu to close the database in the browser
+So, a solution is to make sure to either close the database browser, or use the {\bf File} menu to close the database in the browser
 before you attempt to access the database from Python to avoid
 the problem of your Python code failing because the database is
 locked.
