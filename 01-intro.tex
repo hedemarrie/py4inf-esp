@@ -61,81 +61,50 @@ Las definiciones funcionales de alto nivel de estas partes son las siguientes:
 \item La {\bf Unidad Central de Procesamiento} conocida por sus siglas en ingl\'es como CPU es esa parte de la computadora que ha sido construida para obsesionarse con la cuesti\'on ``?`qu\'e hay que hacer despu\'es?''. Si su computadora tiene una capacidad de 3.0 Gigahertz, eso significa que el CPU preguntar\'a ``?`qu\'e hay que hacer despu\'es?''
 tres mil millones de veces por segundo. Usted va a tener que aprender c\'omo hablar r\'apido para mantener el ritmo de la CPU.
 
-\item The {\bf Main Memory} is used to store information
-that the CPU needs in a hurry.  The main memory is nearly as 
-fast as the CPU.  But the information stored in the main
-memory vanishes when the computer is turned off.
+\item The {\bf Memoria Principa} se usa para almacenar la informaci\'on
+que la CPU necesita de af\'an. La memoria principal es casi tan r\'apida como la CPU, pero la informaci\'on almacenada en la memoria principal desaparece cuando se apaga la computadora.
 
-\item The {\bf Secondary Memory} is also used to store
-information, but it is much slower than the main memory.
-The advantage of the secondary memory is that it can
-store information even when there is no power to the
-computer.  Examples of secondary memory are disk drives
-or flash memory (typically found in USB sticks and portable
-music players).
+\item La {\bf Memoria Secundaria} tambi\'en se usa para almacenar informaci\'on, pero es mucho m\'as lenta que memoria principal.
+La ventaja de la memoria secundaria es que puede almacenar informaci\'on aun cuando la computadora est\'e apagada. Ejemplos de la memoria secundaria son los discos duros o memorias flash (esto se encuentran t\'ipicamente en dispositivos USB y reproductores de m\'usica portables).
 
-\item The {\bf Input and Output Devices} are simply our
-screen, keyboard, mouse, microphone, speaker, touchpad, etc.  
-They are all of the ways we interact with the computer.
+\item The {\bf Dispositivos de entrada y salida (Input y Output)} son su monitor, teclado, mouse, microf\'ono, parlantes, tablero t\'actil integrado, etc.  
+Estos representan todas las formas en que interactuamos con la computadora.
 
-\item These days, most computers also have a
-{\bf Network Connection} to retrieve information over a network.
-We can think of the network as a very slow place to store and
-retrieve data that might not always be ``up''.  So in a sense,
-the network is a slower and at times unreliable form of
-{\bf Secondary Memory}
+\item Hoy en d\'ia la mayor\'ia de las computadoras tambi\'en tienen
+{\bf Conecci\'on a la Red (Network Connection)} para recibir informaci\'oon por medio de una red.
+Se puede pensar de una red como un lugar muy lento para almacenar y recuperar datos que pordr\'ian no estar siempre ``actualizados''. En cierto sentido, la red es m\'as lenta y a veces una forma poco fiable de
+{\bf Memoria Secundaria}
 
 \end{itemize}
 
-While most of the detail of how these components work is best left 
-to computer builders, it helps to have some terminology
-so we can talk about these different parts as we write our programs.
+Mientras que la mayor\'ia de los detalles sobre c\'omo trabajan estos componentes es mejor dej\'arselo a los  que construyen computadoras, conocer la terminolog\'ia ayuda para podernos referir a estos componentes cuando escribimos nuestros programas.
 
-As a programmer, your job is to use and orchestrate 
-each of these resources to solve the problem that you need solving
-and analyze the data you need.  As a programmer you will 
-mostly be ``talking'' to the CPU and telling it what to 
-do next.  Sometimes you will tell the CPU to use the main memory,
-secondary memory, network, or the input/output devices.
+Como programador, su trabajo es utilizar y coordinar cada uno de estos recursos para dar soluci\'on a lo problemas para los cuales usted necesita an\'alizar los datos que necesita usar. Como programador usted va a ``hablarle'' la mayor\'ia del tiempo a la CPU para decirle ``qu\'e debe hacer despu\'es''. Algunas veces usted le va a decir a la CPU que utilice memoria principal, la memoria secundaria, la red o los dispositivos de entrada/salida (input/output).
 
 \beforefig
 \centerline{\includegraphics[height=2.50in]{figs2/arch2.eps}}
 \afterfig
 
-You need to be the person who answers the CPU's ``What next?'' 
-question.  But it would be very uncomfortable to shrink you 
-down to 5mm tall and insert you into the computer just so you 
-could issue a command three billion times per second.  So instead,
-you must write down your instructions in advance.
-We call these stored instructions a {\bf program} and the act 
-of writing these instructions down and getting the instructions to 
-be correct {\bf programming}.
+Usted tiene que ser la persona que le responda a la CPU la pregunta ``?`Qu\'e despu\'es?'', pero ser\'ia muy inc\'omodo reducirlo a usted a un tama\~no de 5mm e insertarlo en la computadora solo para poder emitir un comando tres mil millones de veces por segundo. As\'i que en vez de hacer eso, usted debe escribir sus instrucciones de antemano.
+A estas instrucciones almancenadas les llamamos {\bf programa} y al acto de escribir estas instrucciones y escribirlas correctamente {\bf programaci\'on}.
 
 \section{Comprender el concepto de programaci\'on}
 
-In the rest of this book, we will try to turn you into a person
-who is skilled in the art of programming.  In the end you will be a 
-{\bf programmer} --- perhaps not a professional programmer but 
-at least you will have the skills to look at a data/information
-analysis problem and develop a program to solve the problem.
+En el resto de este libro vamos a tratar de convertirlo a usted en una persona
+con destreza en el arte de programaci\'on. Al final, usted ser\'a un 
+{\bf programador} --- quiz\'a no un programador profesional, pero por lo menos tendr\'a las destrezas para mirar un problema de an\'alisis de informaci\'on y datos y desarrollar un programa como soluci\'on al problema.
 
 \index{resoluci\'on de problemas}
 
-In a sense, you need two skills to be a programmer:
+En un sentido, usted necesita dos destrezas para ser programador:
 
 \begin{itemize}
 
-\item First you need to know the programming language (Python) -
-you need to know the vocabulary and the grammar.  You need to be able 
-spell the words in this new language properly and how to construct 
-well-formed ``sentences'' in this new languages.
+\item Primero, usted necesita saber el lenguage de programaci\'on (Python) -
+usted necesita saber el vocabulario y la gram\'atica. Usted necesita ser capaz de deletrear las palabras en este nuevo lenguage apropiadamente y saber c\'omo construir ``oraciones'' bien formadas en este nuevo lenguage.
 
-\item Second you need to ``tell a story''.  In writing a story,
-you combine words and sentences to convey an idea to the reader. 
-There is a skill and art in constructing the story and skill in
-story writing is improved by doing some writing and getting some
-feedback.  In programming, our program is the ``story'' and the 
-problem you are trying to solve is the ``idea''.
+\item Segundo, usted necesita ``contar una historia''. Al escribir una historia,
+usted combina palabras y oraciones para transmitirle al lector una idea. Componer una historia requiere de destreza y arte, y la destreza de escribir se mejora escribiendo y recibiendo retroalimentaci\'on. En programaci\'on, nuestro programa es la ``historia'' y el problema que usted trata de resolver es la ``idea''.
 
 \end{itemize}
 
