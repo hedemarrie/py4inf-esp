@@ -1,6 +1,7 @@
 % The contents of this file is 
 % Copyright (c) 2009-  Charles R. Severance, All Righs Reserved
-\chapter{?`Por qu\'e debe aprender a programar?}
+
+\chapter{?`Por qu\'e se debe aprender a programar?}
 
 Escribir programas (o programar) es una actividad muy creativa gratificante. Usted puede escribir programas para ganarse la vida o para resolver un problema de an\'alisis dif\'icil o simplemente por el placer de poder ayudar a alguien a resolver un problema. Este libro asume que \textbf{todos} necesitan saber cómo programar y que una vez que se aprende se descubre lo que se quiere lograr con la nueva destreza adquirida.  
 
@@ -13,7 +14,7 @@ Estamos rodeados en nuestra vida diaria de computadoras que van desde p\'ortatil
 
 Los programadores agreagan un sistema operativo y una serie de aplicaciones al \textit{hardware} y nosotros terminamos con un Asistente Personal Digital muy \'util para diferentes cosas.
 
-Nuestras computadoras son r\'apidas y tienen una vasta cantidad de memoria y podr\'ian ser muy \'utiles si tan solo supi\'eramos el lenguage para hablarles y explicarles lo que quisi\'eramos que ``hagan despu\'es''. Si supi\'eramos este lenguage podr\iamos decirle a la computadora que haga tareas repetitivas a nombre nuestro. Interesantemente, el tipo de cosas que las computadoras hacen mejor, a menudo, son cosas que los humanos encontramos aburridas y abrumadoras.
+Nuestras computadoras son r\'apidas y tienen una vasta cantidad de memoria y podr\'ian ser muy \'utiles si tan solo supi\'eramos el lenguage para hablarles y explicarles lo que quisi\'eramos que ``hagan despu\'es''. Si supi\'eramos este lenguage podr\'iamos decirle a la computadora que haga tareas repetitivas a nombre nuestro. Interesantemente, el tipo de cosas que las computadoras hacen mejor, a menudo, son cosas que los humanos encontramos aburridas y abrumadoras.
 
 Por ejemplo, mire los tres primeros p\'arrafos de este cap\'itulo y d\'igame cu\'al es la palabra m\'as com\'un. Mientras que usted es capaz de leer y comprender las palabras en cuesti\'on de segundos, contarlas es doloroso porque no es el tipo de problema que la mente humana ha sido dise\~nada para resolver. Para una computadora es todo lo contrario, leer y comprender el texto de un pedazo de papel es dif\'icil para una computadora, pero contar las palabras y decirle a usted cu\'antas veces la palabra m\'as com\'un fue usada es muy f\'acil para la computadora:
 
@@ -61,6 +62,7 @@ Las definiciones funcionales de alto nivel de estas partes son las siguientes:
 \item La {\bf Unidad Central de Procesamiento} conocida por sus siglas en ingl\'es como CPU es esa parte de la computadora que ha sido construida para obsesionarse con la cuesti\'on ``?`qu\'e hay que hacer despu\'es?''. Si su computadora tiene una capacidad de 3.0 Gigahertz, eso significa que el CPU preguntar\'a ``?`qu\'e hay que hacer despu\'es?''
 tres mil millones de veces por segundo. Usted va a tener que aprender c\'omo hablar r\'apido para mantener el ritmo de la CPU.
 
+<<<<<<< HEAD
 \item The {\bf Main Memory} is used to store information
 that the CPU needs in a hurry.  The main memory is nearly as 
 fast as the CPU.  But the information stored in the main
@@ -84,61 +86,56 @@ We can think of the network as a very slow place to store and
 retrieve data that might not always be ``up''.  So in a sense,
 the network is a slower and at times unreliable form of
 {\bf Secondary Memory}
+=======
+\item The {\bf Memoria Principal} se usa para almacenar la informaci\'on
+que la CPU necesita de af\'an. La memoria principal es casi tan r\'apida como la CPU, pero la informaci\'on almacenada en la memoria principal desaparece cuando se apaga la computadora.
+
+\item La {\bf Memoria Secundaria} tambi\'en se usa para almacenar informaci\'on, pero es mucho m\'as lenta que memoria principal.
+La ventaja de la memoria secundaria es que puede almacenar informaci\'on aun cuando la computadora est\'e apagada. Ejemplos de la memoria secundaria son los discos duros o memorias flash (esto se encuentran t\'ipicamente en dispositivos USB y reproductores de m\'usica portables).
+
+\item The {\bf Dispositivos de entrada y salida (Input y Output)} son su monitor, teclado, mouse, microf\'ono, parlantes, tablero t\'actil integrado, etc.  
+Estos representan todas las formas en que interactuamos con la computadora.
+
+\item Hoy en d\'ia la mayor\'ia de las computadoras tambi\'en tienen
+{\bf Conecci\'on a la Red (Network Connection)} para recibir informaci\'oon por medio de una red.
+Se puede pensar de una red como un lugar muy lento para almacenar y recuperar datos que pordr\'ian no estar siempre ``actualizados''. En cierto sentido, la red es m\'as lenta y a veces una forma poco fiable de
+{\bf Memoria Secundaria}
+>>>>>>> origin/patch-1
 
 \end{itemize}
 
-While most of the detail of how these components work is best left 
-to computer builders, it helps to have some terminology
-so we can talk about these different parts as we write our programs.
+Mientras que la mayor\'ia de los detalles sobre c\'omo trabajan estos componentes es mejor dej\'arselo a los  que construyen computadoras, conocer la terminolog\'ia ayuda para podernos referir a estos componentes cuando escribimos nuestros programas.
 
-As a programmer, your job is to use and orchestrate 
-each of these resources to solve the problem that you need solving
-and analyze the data you need.  As a programmer you will 
-mostly be ``talking'' to the CPU and telling it what to 
-do next.  Sometimes you will tell the CPU to use the main memory,
-secondary memory, network, or the input/output devices.
+Como programador, su trabajo es utilizar y coordinar cada uno de estos recursos para dar soluci\'on a lo problemas para los cuales usted necesita an\'alizar los datos que necesita usar. Como programador usted va a ``hablarle'' la mayor\'ia del tiempo a la CPU para decirle ``qu\'e debe hacer despu\'es''. Algunas veces usted le va a decir a la CPU que utilice memoria principal, la memoria secundaria, la red o los dispositivos de entrada/salida (input/output).
 
 \beforefig
 \centerline{\includegraphics[height=2.50in]{figs2/arch2.eps}}
 \afterfig
 
-You need to be the person who answers the CPU's ``What next?'' 
-question.  But it would be very uncomfortable to shrink you 
-down to 5mm tall and insert you into the computer just so you 
-could issue a command three billion times per second.  So instead,
-you must write down your instructions in advance.
-We call these stored instructions a {\bf program} and the act 
-of writing these instructions down and getting the instructions to 
-be correct {\bf programming}.
+Usted tiene que ser la persona que le responda a la CPU la pregunta ``?`Qu\'e despu\'es?'', pero ser\'ia muy inc\'omodo reducirlo a usted a un tama\~no de 5mm e insertarlo en la computadora solo para poder emitir un comando tres mil millones de veces por segundo. As\'i que en vez de hacer eso, usted debe escribir sus instrucciones de antemano.
+A estas instrucciones almancenadas les llamamos {\bf programa} y al acto de escribir estas instrucciones y escribirlas correctamente {\bf programaci\'on}.
 
 \section{Comprender el concepto de programaci\'on}
 
-In the rest of this book, we will try to turn you into a person
-who is skilled in the art of programming.  In the end you will be a 
-{\bf programmer} --- perhaps not a professional programmer but 
-at least you will have the skills to look at a data/information
-analysis problem and develop a program to solve the problem.
+En el resto de este libro vamos a tratar de convertirlo a usted en una persona
+con destreza en el arte de programaci\'on. Al final, usted ser\'a un 
+{\bf programador} --- quiz\'a no un programador profesional, pero por lo menos tendr\'a las destrezas para mirar un problema de an\'alisis de informaci\'on y datos y desarrollar un programa como soluci\'on al problema.
 
 \index{resoluci\'on de problemas}
 
-In a sense, you need two skills to be a programmer:
+En un sentido, usted necesita dos destrezas para ser programador:
 
 \begin{itemize}
 
-\item First you need to know the programming language (Python) -
-you need to know the vocabulary and the grammar.  You need to be able 
-spell the words in this new language properly and how to construct 
-well-formed ``sentences'' in this new languages.
+\item Primero, usted necesita saber el lenguage de programaci\'on (Python) -
+usted necesita saber el vocabulario y la gram\'atica. Usted necesita ser capaz de deletrear las palabras en este nuevo lenguage apropiadamente y saber c\'omo construir ``oraciones'' bien formadas en este nuevo lenguage.
 
-\item Second you need to ``tell a story''.  In writing a story,
-you combine words and sentences to convey an idea to the reader. 
-There is a skill and art in constructing the story and skill in
-story writing is improved by doing some writing and getting some
-feedback.  In programming, our program is the ``story'' and the 
-problem you are trying to solve is the ``idea''.
+\item Segundo, usted necesita ``contar una historia''. Al escribir una historia,
+usted combina palabras y oraciones para transmitirle al lector una idea. Componer una historia requiere de destreza y arte, y la destreza de escribir se mejora escribiendo y recibiendo retroalimentaci\'on. En programaci\'on, nuestro programa es la ``historia'' y el problema que usted trata de resolver es la ``idea''.
 
 \end{itemize}
 
+<<<<<<< HEAD
 Once you learn one programming language such as Python, you will 
 find it much easier to learn a second programming language such
 as JavaScript or C++.  The new programming language has very different 
@@ -158,11 +155,21 @@ to that point, programming becomes a very pleasant and creative process.
 We start with the vocabulary and structure of Python programs.  Be patient
 as the simple examples remind you of when you started reading for the first
 time. 
+=======
+Una vez que usted aprende un programa como Python, encontrar\'a mucho m\'as f\'acil aprender un segundo lenguage de programaci\'on como JavaScript o C++. El nuevo lenguage de programaci\'on tiene un vocabulario y gram\'atica muy diferente, pero una vez que adquiera destreza en la resoluci\'on de problemas, las destrezas van a ser las mismas para todos los lenauages de programaci\'on.
+
+Usted aprender\'a el ``vocabulario'' y ``oraciones'' de Python bien r\'apido.
+Le tomar\'a m\'as tiempo aprender a escribir un programa coherente para resolver un problema nuevo. Ense\~namos programaci\'on como ense\~namos escritura. Empezamos leyendo y explicando programas y desp\'es escribimos programas sencillos para luego escribir programas m\'as complejos, en el transcurso del tiempo.
+En alg\'un momento usted encuentra ``su inspiraci\'on'' y comienza a descubrir patrones usted mismo y puede ver de manera m\'as natural c\'omo tomar un problema y escribir un programa para darle una soluci\'on, y una vez que llegue a ese punto, la programaci\'on se convierte en un proceso agradable y creativo.  
+
+Comenzamos con el vocabulario y la estructura de los programas de Python. Tenga paciencia cuando la sencillez de los ejemplos le recuerden cuando comenz\'o a leer por primera vez. 
+>>>>>>> origin/patch-1
 
 \section{Palabras y oraciones}
 \index{lenguage de programaci\'on}
 \index{lenguage!programaci\'on}
 
+<<<<<<< HEAD
 Unlike human languages, the Python vocabulary is actually pretty small.
 We call this ``vocabulary'' the ``reserved words''.  These are words that
 have very special meaning to Python.  When Python sees these words in 
@@ -186,6 +193,17 @@ reserved words\footnote{\url{http://xkcd.com/231/}}.
 
 The reserved words in the language where humans talk to 
 Python incudes the following:
+=======
+A diferencia del lenguage humano, el vocabulario de Python es realmente peque\~no. A este ``vocabulario''se le llama ``palabras reservadas''. Estas son palabras que tienen un significado muy especial para Python. Cuando Python ve estas palabras en un programa de Python, ellas tienen un solo significado para Python. M\'as adelante, en la medida en que usted vaya escribiendo programas, usted va a crear sus propias palabras que guardan un significado espec\'ifica para usted llamadas {\bf variables}. Usted tendr\'a una gran latitud al escoger nombres para sus variables, pero no podr\'a usar ninguna de las palabras reservadas para Python como nombre de variables.
+
+En un sentido, cuando entrenamos un perro, usamos palabras especiales como ``si\'entese'', ``quedese ah\'i'', y ``recoja''. Tambi\'en, cuando usted le habla a un perro y no utiliza ninguna de estas palabras reservadas, el perro lo mira con una mirada de asombro en la cara hasta que usted diga una de las palabras reservadas.  
+Por ejemplo, si usted dice ``Oja\'a que m\'as gente camine para mejorar su salud.'', 
+lo m\'as seguro que escucha un perro es ``bla bla bla {\bf camine} bla bla bla bla.''
+Esto es debido a que ``camine'' es una palabra reservada en el lenguage de un perro. Muchos sugerir\'ian que el lenguage entre humanos y gatos no tiene palabras reservadas\footnote{\url{http://xkcd.com/231/}}.
+
+Las palabras reservadas en el lenguage con que los humanos le hablan a 
+Python incluye las siguientes:
+>>>>>>> origin/patch-1
 
 \beforeverb
 \begin{verbatim}
@@ -199,14 +217,10 @@ def       for       lambda    try
 \end{verbatim}
 \afterverb
 %
-That is it, and unlike a dog, Python is already completely trained.
-When you say ``try'', Python will try every time you say it without
-fail.
+Eso es todo, y a diferencia del perro, Python ya est\'a completamente entrenado.
+Cuando usted dice ``try'', Python va a tratar cada vez que usted lo diga sin fallar.
 
-We will learn these reserved words and how they are used in good time,
-but for now we will focus on the Python equivalent of ``speak'' (in 
-human to dog language).  The nice thing about telling Python to speak
-is that we can even tell it what to say by giving it a message in quotes:
+Aprenderemos estas palabras reservadas y c\'omo se usan en el momento apropiado, pero por ahora nos enfocaremos en el equivalente al ``idioma'' de Python en t\'erminos relacionados al leguage como vimos entre la comunicaci\'on humano-perro en el ejemplo anterior. Lo bueno de pedirle a Python que hable es que podemos aun decirle qu\'e decir d\'andole un mensaje entre comillas:
 
 \beforeverb
 \begin{verbatim}
@@ -214,9 +228,8 @@ print 'Hello world!'
 \end{verbatim}
 \afterverb
 
-And we have even written our first syntactically correct Python sentence.
-Our sentence starts with the reserved word {\bf print} followed
-by a string of text of our choosing enclosed in single quotes.
+Y ya hemos escrito nuestra primera oraci\'on sit\'acticamente correcta en Python.
+Nuestra oraci\'on comienza con la palabra reservada {\bf print} seguida de una cadena \textit{string} que nosotros mismos escojamos, encerrada en comillas simples.
 
 \section{Conversaci\'on con Python}
 

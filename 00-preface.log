@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.8.4)  19 AUG 2014 16:10
 entering extended mode
 **00-preface.tex
@@ -5532,3 +5533,5 @@ Here is how much of TeX's memory you used:
  841 hyphenation exceptions out of 8191
  24i,5n,16p,718b,113s stack positions out of 5000i,500n,10000p,200000b,50000s
 !  ==> Fatal error occurred, no output PDF file produced!
+=======
+>>>>>>> origin/patch-1
