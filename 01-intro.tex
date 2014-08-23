@@ -62,46 +62,19 @@ Las definiciones funcionales de alto nivel de estas partes son las siguientes:
 \item La {\bf Unidad Central de Procesamiento} conocida por sus siglas en ingl\'es como CPU es esa parte de la computadora que ha sido construida para obsesionarse con la cuesti\'on ``?`qu\'e hay que hacer despu\'es?''. Si su computadora tiene una capacidad de 3.0 Gigahertz, eso significa que el CPU preguntar\'a ``?`qu\'e hay que hacer despu\'es?''
 tres mil millones de veces por segundo. Usted va a tener que aprender c\'omo hablar r\'apido para mantener el ritmo de la CPU.
 
-<<<<<<< HEAD
-\item The {\bf Main Memory} is used to store information
-that the CPU needs in a hurry.  The main memory is nearly as 
-fast as the CPU.  But the information stored in the main
-memory vanishes when the computer is turned off.
-
-\item The {\bf Secondary Memory} is also used to store
-information, but it is much slower than the main memory.
-The advantage of the secondary memory is that it can
-store information even when there is no power to the
-computer.  Examples of secondary memory are disk drives
-or flash memory (typically found in USB sticks and portable
-music players).
-
-\item The {\bf Input and Output Devices} are simply our
-screen, keyboard, mouse, microphone, speaker, touchpad, etc.  
-They are all of the ways we interact with the computer.
-
-\item These days, most computers also have a
-{\bf Network Connection} to retrieve information over a network.
-We can think of the network as a very slow place to store and
-retrieve data that might not always be ``up''.  So in a sense,
-the network is a slower and at times unreliable form of
-{\bf Secondary Memory}
-=======
-\item The {\bf Memoria Principal} se usa para almacenar la informaci\'on
+\item La {\bf Memoria Principal} se usa para almacenar la informaci\'on
 que la CPU necesita de af\'an. La memoria principal es casi tan r\'apida como la CPU, pero la informaci\'on almacenada en la memoria principal desaparece cuando se apaga la computadora.
 
 \item La {\bf Memoria Secundaria} tambi\'en se usa para almacenar informaci\'on, pero es mucho m\'as lenta que memoria principal.
 La ventaja de la memoria secundaria es que puede almacenar informaci\'on aun cuando la computadora est\'e apagada. Ejemplos de la memoria secundaria son los discos duros o memorias flash (esto se encuentran t\'ipicamente en dispositivos USB y reproductores de m\'usica portables).
 
-\item The {\bf Dispositivos de entrada y salida (Input y Output)} son su monitor, teclado, mouse, microf\'ono, parlantes, tablero t\'actil integrado, etc.  
+\item Los {\bf Dispositivos de entrada y salida (Input y Output)} son su monitor, teclado, mouse, microf\'ono, parlantes, tablero t\'actil integrado, etc.  
 Estos representan todas las formas en que interactuamos con la computadora.
 
 \item Hoy en d\'ia la mayor\'ia de las computadoras tambi\'en tienen
 {\bf Conecci\'on a la Red (Network Connection)} para recibir informaci\'oon por medio de una red.
 Se puede pensar de una red como un lugar muy lento para almacenar y recuperar datos que pordr\'ian no estar siempre ``actualizados''. En cierto sentido, la red es m\'as lenta y a veces una forma poco fiable de
-{\bf Memoria Secundaria}
->>>>>>> origin/patch-1
-
+{\bf Memoria Secundaria}.
 \end{itemize}
 
 Mientras que la mayor\'ia de los detalles sobre c\'omo trabajan estos componentes es mejor dej\'arselo a los  que construyen computadoras, conocer la terminolog\'ia ayuda para podernos referir a estos componentes cuando escribimos nuestros programas.
@@ -135,27 +108,6 @@ usted combina palabras y oraciones para transmitirle al lector una idea. Compone
 
 \end{itemize}
 
-<<<<<<< HEAD
-Once you learn one programming language such as Python, you will 
-find it much easier to learn a second programming language such
-as JavaScript or C++.  The new programming language has very different 
-vocabulary and grammar but once you learn problem solving skills, 
-they will be the same across all programming languages.
-
-You will learn the ``vocabulary'' and ``sentences'' of Python pretty quickly.
-It will take longer for you to be able to write a coherent program
-to solve a brand new problem.  We teach programming much like we teach
-writing.  We start reading and explaining programs and then we write 
-simple programs and then write increasingly complex programs over time.
-At some point you ``get your muse'' and see the patterns on your own
-and can see more naturally how to take a problem and 
-write a program that solves that problem.  And once you get 
-to that point, programming becomes a very pleasant and creative process.  
-
-We start with the vocabulary and structure of Python programs.  Be patient
-as the simple examples remind you of when you started reading for the first
-time. 
-=======
 Una vez que usted aprende un programa como Python, encontrar\'a mucho m\'as f\'acil aprender un segundo lenguage de programaci\'on como JavaScript o C++. El nuevo lenguage de programaci\'on tiene un vocabulario y gram\'atica muy diferente, pero una vez que adquiera destreza en la resoluci\'on de problemas, las destrezas van a ser las mismas para todos los lenauages de programaci\'on.
 
 Usted aprender\'a el ``vocabulario'' y ``oraciones'' de Python bien r\'apido.
@@ -163,37 +115,11 @@ Le tomar\'a m\'as tiempo aprender a escribir un programa coherente para resolver
 En alg\'un momento usted encuentra ``su inspiraci\'on'' y comienza a descubrir patrones usted mismo y puede ver de manera m\'as natural c\'omo tomar un problema y escribir un programa para darle una soluci\'on, y una vez que llegue a ese punto, la programaci\'on se convierte en un proceso agradable y creativo.  
 
 Comenzamos con el vocabulario y la estructura de los programas de Python. Tenga paciencia cuando la sencillez de los ejemplos le recuerden cuando comenz\'o a leer por primera vez. 
->>>>>>> origin/patch-1
 
 \section{Palabras y oraciones}
 \index{lenguage de programaci\'on}
 \index{lenguage!programaci\'on}
 
-<<<<<<< HEAD
-Unlike human languages, the Python vocabulary is actually pretty small.
-We call this ``vocabulary'' the ``reserved words''.  These are words that
-have very special meaning to Python.  When Python sees these words in 
-a Python program, they have one and only one meaning to Python.  Later
-as you write programs you will make your own words that have meaning to 
-you called {\bf variables}.   You will have great latitude in choosing
-your names for your variables, but you cannot use any of Python's 
-reserved words as a name for a variable.
-
-In a sense, when we train a dog, we would use special words like,
-``sit'', ``stay'', and ``fetch''.  Also when you talk to a dog and
-don't use any of the reserved words, they just look at you with a 
-quizzical look on their faces until you say a reserved word.  
-For example, if you say, 
-``I wish more people would walk to improve their overall health.'', 
-what most dogs likely hear is,
-``blah blah blah {\bf walk} blah blah blah blah.''
-That is because ``walk'' is a reserved word in dog language.  Many
-might suggest that the language between humans and cats has no
-reserved words\footnote{\url{http://xkcd.com/231/}}.
-
-The reserved words in the language where humans talk to 
-Python incudes the following:
-=======
 A diferencia del lenguage humano, el vocabulario de Python es realmente peque\~no. A este ``vocabulario''se le llama ``palabras reservadas''. Estas son palabras que tienen un significado muy especial para Python. Cuando Python ve estas palabras en un programa de Python, ellas tienen un solo significado para Python. M\'as adelante, en la medida en que usted vaya escribiendo programas, usted va a crear sus propias palabras que guardan un significado espec\'ifica para usted llamadas {\bf variables}. Usted tendr\'a una gran latitud al escoger nombres para sus variables, pero no podr\'a usar ninguna de las palabras reservadas para Python como nombre de variables.
 
 En un sentido, cuando entrenamos un perro, usamos palabras especiales como ``si\'entese'', ``quedese ah\'i'', y ``recoja''. Tambi\'en, cuando usted le habla a un perro y no utiliza ninguna de estas palabras reservadas, el perro lo mira con una mirada de asombro en la cara hasta que usted diga una de las palabras reservadas.  
@@ -203,7 +129,6 @@ Esto es debido a que ``camine'' es una palabra reservada en el lenguage de un pe
 
 Las palabras reservadas en el lenguage con que los humanos le hablan a 
 Python incluye las siguientes:
->>>>>>> origin/patch-1
 
 \beforeverb
 \begin{verbatim}
