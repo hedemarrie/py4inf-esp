@@ -262,13 +262,12 @@ Le hubiera tomado bastante adivinar eso, as\'i que tener el libro a la mano prob
 
 \section{Terminolog\'ia: int\'erprete y compilador}
 
-Python es un language de {\bf alto nivel} cuya intenci\'on del dise\
-~no ha sido hacerlo relativamente sencillo para ser le\'ido y escrito por humanos y para que las computadoras 
+Python es un lenguage de {\bf alto nivel} cuya intenci\'on es hacerlo relativamente sencillo para ser le\'ido y escrito por humanos y para que las computadoras 
 lo lean y lo procesen. Otros lenguages de alto nivel incluyen Java, C++,
 PHP, Ruby, Basic, Perl, JavaScript, y muchos otros. El hardware dentro de la Unidad
 Central de Procesamiento (CPU por sus siglas en ingl\'es) no entiende ninguno de estos lenguages de alto nivel.
 
-La CPU comprende un lenguage que se conoce como {\bf machine-language} o lenguage de m\'aquina. El Lenguage de M\'aquina es muy sencillo y francamente muy agotador para escribir porque se representa por ceros y unos:
+La CPU comprende un lenguage que se conoce como {\bf machine-language} o lenguage de m\'aquina. El Lenguage de M\'aquina es muy simple y francamente muy agotador para escribir porque se representa por ceros y unos:
 
 \beforeverb
 \begin{verbatim}
@@ -278,19 +277,19 @@ La CPU comprende un lenguage que se conoce como {\bf machine-language} o lenguag
 \end{verbatim}
 \afterverb
 %
-El Lenguage de M\'aquina se ve muy sencillo por encima, dado que consiste solo de ceros y unos, pero su sintaxis es aun muy compleja y mucho m\'as elaborado que Python. As\'i que muy pocos programadores escriben en lenguage de m\'aquina. En lugar de eso, lo que hacemos es construir varios traductores que le permitan a los programadores escribir en lenguages de alto nivel como Python o JavaScript
+El Lenguage de M\'aquina se ve muy sencillo por encima, dado que consiste solo de ceros y unos, pero su sintaxis es aun muy compleja y mucho m\'as elaborada que Python. As\'i que muy pocos programadores escriben en lenguage de m\'aquina. En lugar de eso, lo que hacemos es construir varios traductores que le permitan a los programadores escribir en lenguages de alto nivel como Python o JavaScript
 y estos traductores convierten los programas a lenguage de m\'aquina para la ejecuci\'on de los programas en la CPU.
 
-Siendo que el lenguage de m\'aquina est\'a asociada al hardware de la computadora, el lenguage de m\'aquina no es {\bf portable} a trav\'es de los diferentes tipos de hardware. Los Programas escritos en lenguages de 
-alto nivel se pueden mover entre las diferentes computadoras usando un int\'erprete diferente en la nueva computadora o al recopilar el c\'odigo para crear una versi\'on de lenguage de m\'aquina del programa que se pretende usar en la nueva computadora.
+Siendo que el lenguage de m\'aquina est\'a asociado al hardware de la computadora, el lenguage de m\'aquina no es {\bf portable} a trav\'es de los diferentes tipos de hardware. Los Programas escritos en lenguages de 
+alto nivel se pueden mover entre las diferentes computadoras usando un int\'erprete diferente en la nueva computadora o al recopilar el c\'odigo para crear una versi\'on de lenguage de m\'aquina del programa que se pretende usar en otra computadora diferente.
 
 Estos int\'erpretes de lenguages de programaci\'on se ubican en dos categorias generales:
 (1) int\'erpretes y (2) compiladores.
 
 Un {\bf int\'erprete} lee el c\'odigo fuente del programa como ha sido escrito por el
-programador, analiza el c\'odigo fuente e interpreta las instrucciones al instante.
-Python es un int\'erprete y cuando estamos ejecutando la aplicaci\'on Python interactivamente, 
-podemos escribir una l\'inea de Python (una oraci\'on) y Python la procesa de inmediato
+programador, analiza el c\'odigo e interpreta las instrucciones al instante.
+Python es un int\'erprete y cuando estamos ejecutando la aplicaci\'on Python, interactivamente, 
+podemos escribir una l\'inea de Python (una oraci\'on) y Python la procesa de inmediato,
 y queda listo para que nosotros escribamos otra l\'inea en Python.   
 
 Algunas de las l\'ineas en Python le dicen a Python que usted quiere que recuerde algunos valores para m\'as tarde. Necesitamos escoger un nombre para almacenar ese valor en memoria y podemos usar ese nombre simb\'olico para recuperar el valor m\'as tarde. Usamos el t\'ermino {\bf variable} para referirnos al nombre con el cual se almacenan esos datos.
