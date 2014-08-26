@@ -262,16 +262,13 @@ Le hubiera tomado bastante adivinar eso, as\'i que tener el libro a la mano prob
 
 \section{Terminolog\'ia: int\'erprete y compilador}
 
-Python is a {\bf high-level} language intended to be relatively
-straightforward for humans to read and write and for computers
-to read and process.  Other high-level languages include: Java, C++,
-PHP, Ruby, Basic, Perl, JavaScript, and many more.  The actual hardware
-inside the Central Processing Unit (CPU) does not understand any
-of these high level languages.
+Python es un language de {\bf alto nivel} cuya intenci\'on del dise\
+~no ha sido hacerlo relativamente sencillo para ser le\'ido y escrito por humanos y para que las computadoras 
+lo lean y lo procesen. Otros lenguages de alto nivel incluyen Java, C++,
+PHP, Ruby, Basic, Perl, JavaScript, y muchos otros. El hardware dentro de la Unidad
+Central de Procesamiento (CPU por sus siglas en ingl\'es) no entiende ninguno de estos lenguages de alto nivel.
 
-The CPU understands a language we call {\bf machine-language}.  Machine
-language is very simple and frankly very tiresome to write because it 
-is represented all in zeros and ones:
+La CPU comprende un lenguage que se conoce como {\bf machine-language} o lenguage de m\'aquina. El Lenguage de M\'aquina es muy sencillo y francamente muy agotador para escribir porque se representa por ceros y unos:
 
 \beforeverb
 \begin{verbatim}
@@ -281,33 +278,22 @@ is represented all in zeros and ones:
 \end{verbatim}
 \afterverb
 %
-Machine language seems quite simple on the surface given that there 
-are only zeros and ones, but its syntax is even more complex
-and far more intricate than Python.  So very few programmers ever write
-machine language.  Instead we build various translators to allow
-programmers to write in high level languages like Python or JavaScript
-and these translators convert the programs to machine language for actual
-execution by the CPU.
+El Lenguage de M\'aquina se ve muy sencillo por encima, dado que consiste solo de ceros y unos, pero su sintaxis es aun muy compleja y mucho m\'as elaborado que Python. As\'i que muy pocos programadores escriben en lenguage de m\'aquina. En lugar de eso, lo que hacemos es construir varios traductores que le permitan a los programadores escribir en lenguages de alto nivel como Python o JavaScript
+y estos traductores convierten los programas a lenguage de m\'aquina para la ejecuci\'on de los programas en la CPU.
 
-Since machine language is tied to the computer hardware, machine language
-is not {\bf portable} across different types of hardware.  Programs written in 
-high-level languages can be moved between different computers by using a 
-different interpreter on the new machine or re-compiling the code to create
-a machine language version of the program for the new machine.
+Siendo que el lenguage de m\'aquina est\'a asociada al hardware de la computadora, el lenguage de m\'aquina no es {\bf portable} a trav\'es de los diferentes tipos de hardware. Los Programas escritos en lenguages de 
+alto nivel se pueden mover entre las diferentes computadoras usando un int\'erprete diferente en la nueva computadora o al recopilar el c\'odigo para crear una versi\'on de lenguage de m\'aquina del programa que se pretende usar en la nueva computadora.
 
-These programming language translators fall into two general categories:
-(1) interpreters and (2) compilers.
+Estos int\'erpretes de lenguages de programaci\'on se ubican en dos categorias generales:
+(1) int\'erpretes y (2) compiladores.
 
-An {\bf interpreter} reads the source code of the program as written by the
-programmer, parses the source code, and interprets the instructions on-the-fly.
-Python is an interpreter and when we are running Python interactively, 
-we can type a line of Python (a sentence) and Python processes it immediately
-and is ready for us to type another line of Python.   
+Un {\bf int\'erprete} lee el c\'odigo fuente del programa como ha sido escrito por el
+programador, analiza el c\'odigo fuente e interpreta las instrucciones al instante.
+Python es un int\'erprete y cuando estamos ejecutando la aplicaci\'on Python interactivamente, 
+podemos escribir una l\'inea de Python (una oraci\'on) y Python la procesa de inmediato
+y queda listo para que nosotros escribamos otra l\'inea en Python.   
 
-Some of the lines of Python tell Python that you want it to remember some 
-value for later.   We need to pick a name for that value to be remembered and
-we can use that symbolic name to retrieve the value later.  We use the 
-term {\bf variable} to refer to the labels we use to refer to this stored data.
+Algunas de las l\'ineas en Python le dicen a Python que usted quiere que recuerde algunos valores para m\'as tarde. Necesitamos escoger un nombre para almacenar ese valor en memoria y podemos usar ese nombre simb\'olico para recuperar el valor m\'as tarde. Usamos el t\'ermino {\bf variable} para referirnos al nombre con el cual se almacenan esos datos.
 
 \beforeverb
 \begin{verbatim}
