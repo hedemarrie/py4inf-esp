@@ -329,23 +329,18 @@ Si usted abriera un archivo ejecutable en un editor de texto, ver\'ia algo compl
 \end{verbatim}
 \afterverb
 %
-It is not easy to read or write machine language so it is nice that we have
-{\bf interpreters} and {\bf compilers} that allow us to write in a high-level
-language like Python or C.
+No es f\'acil leer o escribir en lenguage de m\'aquina por eso es bueno tener 
+{\bf int\'erpretes} y {\bf compiladores} que nos permiten escribir en un lenguage de alto nivel
+como Python o C.
 
-Now at this point in our discussion of compilers and interpreters, you should 
-be wondering a bit about the Python interpreter itself.  What language is 
-it written in?  Is it written in a compiled language?  When we type
-``python'', what exactly is happening?
+As\'i que en este punto de nuestra discusi\'on sobre compiladores e int\'erpretes, usted debe estarse  
+preguntando lo mismo sobre el int\'erprete de Python. ?`En qu\'e language est\'a escrito?  
+`?Ha sido escrito para en un leguage para compilar? ?`Qu\'e es exactamente lo que ocurre cuando escribimos ``python''?
 
-The Python interpreter is written in a high level language called ``C''.  
-You can look at the actual source code for the Python interpreter by
-going to \url{www.python.org} and working your way to their source code.
-So Python is a program itself and it is compiled into machine code and
-when you installed Python on your computer (or the vendor installed it),
-you copied a machine-code copy of the translated Python program onto your
-system.   In Windows the executable machine code for Python itself is likely
-in a file with a name like:
+El int\'erprete de Python est\'a escrito en un lenguage de alto nivel ``C''.  
+Usted puede buscar la fuente misma del c\'odigo llendo a \url{www.python.org} y buscar el c\'odigo fuente.
+As\'i que Python mismo es un programa y se compila en c\'odigo de m\'aquina, y cuando usted instal\'o Python en su computadora (o quien se la vendi\'o lo instal\'o),
+usted copi\'o una copia del c\'odigo de m\'aquina del programa de Python traducido al sistema de su computadora. En Windows el c\'odigo de m\'aquina de Python que lo ejecuta debe estar en un archivo que aparece as\'i:
 
 \beforeverb
 \begin{verbatim}
@@ -353,25 +348,19 @@ C:\Python27\python.exe
 \end{verbatim}
 \afterverb
 %
-That is more than you really need to know to be a Python programmer, but
-sometimes it pays to answer those little nagging questions right at 
-the beginning.
+Esto es m\'as de lo que usted realmente necesita saber para convertirse en un programador de Python, pero
+algunas veces vale la pena contestar esas pequen\~nas inquietudes desde el comienzo.
 
 \section{Escribir un programa}
 
-Typing commands into the Python interpreter is a great way to experiment 
-with Python's features, but it is not recommended for solving more complex problems.
+Escribir comandos en el int\'erprete de Python es una excelente forma de experimentar con las herramientas que ofrece Python, pero no se recomienda hacerlo para resolver problemas complejos.
 
-When we want to write a program, 
-we use a text editor to write the Python instructions into a file,
-which is called a {\bf script}.  By
-convention, Python scripts have names that end with {\tt .py}.
+Cuando queremos escribir un programa, utilizamos un editor de texto para escribir las instrucciones en un archivo que Python pueda leer al cual se le da el nombre de {\bf script}. Tradicionalmente los ``scripts'' en Python terminan con {\tt .py}.
 
 \index{script}
 
-To execute the script, you have to tell the Python interpreter 
-the name of the file.  In a Unix or Windows command window, 
-you would type {\tt python hello.py} as follows:
+Para ejecujar el ``script'', usted debe decirle al int\'erprete de Python cu\'al es el nombre del archivo.  
+En la terminal de Unix o Windows, usted escribe el comando {\tt python hello.py} de la siguiente manera:
 
 \beforeverb
 \begin{verbatim}
@@ -383,17 +372,14 @@ csev$
 \end{verbatim}
 \afterverb
 %
-The ``csev\$'' is the operating system prompt, and the ``cat hello.py'' is 
-showing us that the file ``hello.py'' has a one line Python program to print
-a string.
+El ``csev\$'' es el indicador del sistema operativo, y ``cat hello.py'' nos muestra que el archivo 
+``hello.py'' tiene un programa Pytnon de una l\'inea para imprimir una frase (string).
 
-We call the Python interpreter and tell it to read its source code from
-the file ``hello.py'' instead of prompting us for lines of Python code
-interactively.
+Llamamos al int\'erprete de Python y le decimos que lea el c\'odigo fuente del archivo
+``hello.py'' en vez de entrar las l\'ineas de c\'odigo interactivamente.
 
-You will notice that there was no need to have {\bf quit()} at the end of
-the Python program in the file.   When Python is reading your source code
-form a file, it knows to stop when it reaches the end of the file.
+Usted observar\'a que no hubo necesidad de escribir {\bf quit()} al final del arcivo del programa 
+en Python. Cuando Python est\'a leyendo el c\'odigo fuente de un archivo, sabe que tiene que parar cuando llega al final del archivo.
 
 \section{?`Qu\'e es un programa?}
 
