@@ -383,42 +383,26 @@ en Python. Cuando Python est\'a leyendo el c\'odigo fuente de un archivo, sabe q
 
 \section{?`Qu\'e es un programa?}
 
-The definition of a {\bf program} at its most basic is a sequence
-of Python statements that have been crafted to do something.
-Even our simple {\bf hello.py} script is a program.  It is a one-line
-program and is not particularly useful, but in the strictest definition,
-it is a Python program.
+La definii\'on de un {\bf programa} al nivel m\'as b\'asico significa una secuencia de afirmaciones en Python creadas para hacer algo.
+Aun nuestro simple ``script'' {\bf hello.py}  es un programa. Es un programa de una l\'inea y no es particularmente \'util, pero en su estricta definici\'on, es un programa de en lenguage Python.
 
-It might be easiest to understand what a program is by thinking about a problem 
-that a program might be built to solve, and then looking at a program
-that would solve that problem.
+Puede ser que sea m\'as f\'acil entender lo que es un programa pensando en un problema para el cual se cree un programa que lo pueda resolver, y luego ver el programa que resolver\'ia ese problema.
 
-Lets say you are doing Social Computing research on Facebook posts and 
-you are interested in the most frequently used word in a series of posts.
-You could print out the stream of facebook posts and pore over the text
-looking for the most common word, but that would take a long time and be very 
-mistake prone.  You would be smart to write a Python program to handle the
-task quickly and accurately so you can spend the weekend doing something 
-fun.
+Digamos que usted est\'a realizando una investigaci\'on sobre Computaci\'on a nivel social en los mensajes de Facebook y usted est\'a interesado en averiguar cu\'al es la palabra m\'as usada en una serie de mensajes.
+Usted podr\'ia imprimir toda la cadena de mensajes de facebook y destilar todo el texto al buscar la palabras m\'as com\'un, pero eso le tomar\'ia mucho tiempo y ser\'ia muy f\'acil cometer errores. Ser\'ia m\'as inteligente escribir un programa en Python para manejar la tarea m\'as r\'apida y precisa de modo que pueda pasar el fin de semana haciendo algo m\'as divertido.
 
-For example look at the following text about a clown and a car.  Look at the 
-text and figure out the most common word and how many times it occurs.
+Por ejemplo mire el siguiente texto sobre un payaso y un carro. Mire el texto y encuentre la palabra m\'as com\'un y cu\'antas veces aparece.
 
 \beforeverb
 \begin{verbatim}
-the clown ran after the car and the car ran into the tent 
-and the tent fell down on the clown and the car 
+el payaso corre tras el carro y el carro corre a la carpa y la carpa cae sobre el payaso y el carro
 \end{verbatim}
 \afterverb
 %
-Then imagine that you are doing this task looking at millions of lines of 
-text.  Frankly it would be quicker for you to learn Python and write a 
-Python program to count the words than it would be to manually 
-scan the words.
+Despu\'es imag\'inese que usted est\'e haciendo esta tarea buscando en millones de l\'ineas de texto. 
+Francamente ser\'ia m\'as r\'apido que usted aprenda Python y escriba un programa en Python para contar las palabras que darle un vistazo a las palabras.
 
-The even better news is that I already came up with a simple program to 
-find the most common word in a text file.  I wrote it,
-tested it, and now I am giving it to you to use so you can save some time.
+La mejor noticia todav\'ia es que yo ya escrib\'i un programa sencillo para encontrar la palabra m\'as com\'un en un archivo de texto. Yo lo escrib\'i, lo verifiqu\'e y ahora se lo doy a usted para que lo utilice y ahorre tiempo.
 
 \beforeverb
 \begin{verbatim}
@@ -442,20 +426,14 @@ print bigword, bigcount
 \end{verbatim}
 \afterverb
 %
-You don't even need to know Python to use this program.  You will need to get through 
-Chapter 10 of this book to fully understand the awesome Python techniques that were
-used to make the program.  You are the end user, you simply use the program and marvel
-at its cleverness and how it saved you so much manual effort.
-You simply type the code 
-into a file called {\bf words.py} and run it or you download the source 
-code from \url{http://www.pythonlearn.com/code/} and run it.
+Usted nisiquiera tiene que saber Python para usar este programa. Usted tendr\'a que llegar al cap\'itulo 10 de este libro para entender completamente las maravillosas t\'ecnicas de Python que se usaron para escribir ese programa. Usted es el usuario, simplemente use el programa y marav\'illese de la inteligencia y c\'omo le ahorra tiempo y esfuerzo.
+Usted simplemente escribe el c\'odigo en un archivo y le da el nombre de  
+{\bf words.py} lo ejecuta, o puede bajar el archivo de \url{http://www.pythonlearn.com/code/} para ejecutarlo.
 
 \index{program}
-This is a good example of how Python and the Python language are acting as an intermediary
-between you (the end-user) and me (the programmer).  Python is a way for us to exchange useful
-instruction sequences (i.e. programs) in a common language that can be used by anyone who 
-installs Python on their computer.  So neither of us are talking {\em to Python},
-instead we are communicating with each other {\em through} Python.
+Este es un buen ejemplo de c\'omo Python y el lenguage Python act\'uan como intermediarios entre usted
+como (usuario) y yo como (programador). Python es una manera para que nosotros intercambiemos instrucciones secuenciales \'utiles (i.e. programas) en un lenguage com\'un que pueden ser usadas por cualquiera que instale Python en su computadora. As\'i que ninguno de nosotros est\'a hablando con {\em to Python},
+sino que nos comunicamos {\em a trav\'es} de Python.
 
 \section{Los bloques de construcci\'on de un programa}
 
