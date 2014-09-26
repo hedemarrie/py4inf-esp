@@ -450,13 +450,13 @@ Hay algunos patrones conceptuales de bajo nivel que se usan para escribir progra
 
 \item[output:] Desplegar los resultado del programa en la pantalla o almacenarlos en un archivo, o quiz\'a escribirlos en un dispositivo como parlante de m\'usica o texto de voz.
 
-\item[sequential execution:] Realizar enunciados uno tras otro en el orden que los encuentre en el gui\'on.
+\item[exjecuci\'on sequential:] Realizar enunciados uno tras otro en el orden que los encuentre en el gui\'on.
 
-\item[conditional execution:] Revisar ciertas condiciones y ejecutar o saltar un secuencia de enunciados.
+\item[exjecuci\'on condicional:] Revisar ciertas condiciones y ejecutar o saltar un secuencia de enunciados.
 
-\item[repeated execution:] Realizar alguna serie de enunciados repetidamente, generalmente con alguna variaci\'on.
+\item[exjecuci\'on repetida:] Realizar alguna serie de enunciados repetidamente, generalmente con alguna variaci\'on.
 
-\item[reuse:] Escriba una serie de instrucciones una sola vez y darles un nombre y despu\'es reusarlas en la medida en que se necesiten a lo largo del programa.
+\item[reuso:] Escribir una serie de instrucciones una sola vez y darles un nombre y despu\'es reusarlas en la medida en que se necesiten a lo largo del programa.
 
 \end{description}
 
@@ -502,20 +502,20 @@ SyntaxError: invalid syntax
 Nada se gana con argumentar con Python. Es una herramienta,
 no tiene emociones y est\'a feliz y listo para servirlo a usted cuando lo necesite. Sus mensajes de errores suenan cruel, pero son solo la manera de Python pedir ayuda. Ha mirado lo que usted ha escrito y sencillamente no puede entender lo que lee.
 
-Python es much m\'as como un perro, amoroso incondicionalemnte, que se comunica con unas pocas palabras clave que entiende, mir\;andolo con una mirada dulce en su cara ({\tt >>>}) y esperando que usted diga algo que pueda entender.
+Python es mucho m\'as como un perro, amoroso incondicionalemnte, que se comunica con unas pocas palabras clave que entiende, mir\;andolo con una mirada dulce en su cara ({\tt >>>}) y esperando que usted diga algo que pueda entender.
 Cuando Python dice ``SyntaxError: invalid syntax'', est\'a simplemente moviendo su cola y diciendo , ``Parece que usted est\'a diciendo algo, pero yo no entiendo lo que quiere decir, pero por favor siga hablando conmigo ({\tt >>>}).''
 
 En la medida que sus programas se vuelvan m\'as sofisticados, usted encontrar\'a tres tipos de errores en general:
 
 \begin{description}
 
-\item[Syntax errors:] Estos son los primeros errores que usted har\'a y los m\'as f\'aciles de arreglar. Un error sint\'actico (syntax error) significa que usted ha violado las reglas de ``gram\'atica'' de Python.
+\item[Errores sint\'acticos:] Estos son los primeros errores que usted har\'a y los m\'as f\'aciles de arreglar. Un error sint\'actico (syntax error) significa que usted ha violado las reglas de ``gram\'atica'' de Python.
 Python hace lo mejor que puede para mostrar la l\'inea y letra donde nota que hay un problema. La \'unica parte complicada de los errores sint\'acticos es que algunas veces el error que se necesita corregir est\'a realmente m\'as arriba de donde Python 
 {\em muestra} que hubo un error. As\'i que la l\'inea y la letra que Python indica en donde se encuentra el error sint\'actico (syntax error) puede ser solo un punto de partida para su investigaci\'on.
 
-\item[Logic errors:] Un error de l\'ogica es cuando su programa est\'a bien sint\'acticamente pero hay un error en el orden de los enunciados o quiz\'as un error en la relaci\'on de los enunciados entre uno y uno. Un buen ejemplo de error de l\'ogica podr\'ia ser, ``tome agua de su botella de agua, pongala en su mochila, camine a la biblioteca y luego ponga la tapa en la botella.''
+\item[Errores de l\'ogica:] Un error de l\'ogica es cuando su programa est\'a bien sint\'acticamente pero hay un error en el orden de los enunciados o quiz\'as un error en la relaci\'on de los enunciados entre uno y uno. Un buen ejemplo de error de l\'ogica podr\'ia ser, ``tome agua de su botella de agua, pongala en su mochila, camine a la biblioteca y luego ponga la tapa en la botella.''
 
-\item[Semantic errors:] Un error de sem\'antica es cuando su descripci\'on de los pasos a tomar est\'a sint\'acticamente correcta pero y en el orden adecuado, pero hay simplemente un error en el programa. El programa est\'a perfectamente bien pero no hace los que usted {\em intentaba} que realizara. Un ejemplo simple ser\'ia si usted le da indicaciones a una persona para llegar a un restaurante y le dice, ``... cuando llegue a la intersecci\'on de la estaci\'on de gasolina, cruce a la izquierda y vaya una milla y el restaurante es un edificio rojo a su izquierda.'' Su amigo va tarde y lo llama a usted y le dice que est\'a en una finca y est\'a caminando alrededor de un establo sin ning\'un letrero de restaurante.  
+\item[Errores de sem\'antica:] Un error de sem\'antica es cuando su descripci\'on de los pasos a tomar est\'a sint\'acticamente correcta pero y en el orden adecuado, pero hay simplemente un error en el programa. El programa est\'a perfectamente bien pero no hace los que usted {\em intentaba} que realizara. Un ejemplo simple ser\'ia si usted le da indicaciones a una persona para llegar a un restaurante y le dice, ``... cuando llegue a la intersecci\'on de la estaci\'on de gasolina, cruce a la izquierda y vaya una milla y el restaurante es un edificio rojo a su izquierda.'' Su amigo va tarde y lo llama a usted y le dice que est\'a en una finca y est\'a caminando alrededor de un establo sin ning\'un letrero de restaurante.  
 Luego usted pregunta si ``cruzaron a la izquierda o a la dereha en la estaci\'on de gasolina'' y la respuesta es, ``Yo segu\'i sus indicaciones al pie de la letra, las tengo escritas, dice que cruce a la izquierda y vaya una milla en la estaci\'on de gasolina.'' Luego, usted dice,
 ``Lo siento, aunque mis indicaciones estaban sint\'acticamente correctas, lastimosamente conten\'ian un peque\~no error sem\'antico.'' 
 
@@ -525,32 +525,14 @@ Una vez m\'as, en los tres tipos de errores, Python est\'a meramente tratando de
 
 \section{La jornada de aprendizaje}
 
-As you progress through the rest of the book, don't be afraid if the concepts 
-don't seem to fit together well the first time.  When you were learning to speak, 
-it was not a problem  for your first few years that you just made cute gurgling noises.
-And it was OK if it took six months for you to move from simple vocabulary to 
-simple sentences and took 5-6 more years to move from sentences to paragraphs, and a
-few more years to be able to write an interesting complete short story on your own.
+En la medida en que progrese en el resto del libro, no tenga miedo si los conceptos 
+parecen que no calzaran bien al principio. Cuando usted estaba aprendiendo a hablar, no era problema que los primeros a\~nos hiciera sonidos adorables, y era razonable si le tom\'o seis mese pasar de un vocabulario simple a frases simples y le tom\'o de 5 a 6 a\~nos m\'as pasar de frases a p\'arrafos y unos a\~nos m\'as para ser capaz de escribir una corta historia completa  sin ayuda.
 
-We want you to learn Python much more rapidly, so we teach it all at the same time
-over the next few chapters.  
-But it is like learning a new language that takes time to absorb and understand
-before it feels natural.
-That leads to some confusion as we visit and revisit
-topics to try to get you to see the big picture while we are defining the tiny
-fragments that make up the big picture.  While the book is written linearly and
-if you are taking a course, it will progress in a linear fashion, don't hesitate
-to be very non-linear in how you approach the material.  Look forwards and backwards
-and read with a light touch.  By skimming more advanced material without 
-fully understanding the details, you can get a better understanding of the ``why?'' 
-of programming.  By reviewing previous material and even re-doing earlier 
-exercises, you will realize that you actually learned a lot of material even 
-if the material you are currently staring at seems a bit impenetrable.
+Queremos que aprenda Python mucho m\'as r\'apido, as\'i que lo ense\~namos todo a la vez a lo largo de los pr\'oximos cap\'itulos, pero es como aprender un nuevo idioma que toma tiempo aprender y entender antes de que se sienta natural.
+Eso lleva a cierta confusi\'on al visitar y revisitar temas para tratar de que usted vea el panorama completo mientras definimos los peque\~nos fragmentos que forman todo el panorama. Aunque el libro est\'a escrito de manera lineal y si usted est\'a tomando el curso, el progreso va a ser de modo lineal, la manera en que usted maneje el material puede ser no lineal. Mire hacia adelante o hacia atr\'as y lea con un toque ligero. Al seguir el material m\'as avanzado sin entender completamente los detalles, usted puede adquirir una mejor comprensi\'on del ``porqu\'e'' 
+de la programaci\'om. Al revisar material previo y aun volver a hacer los ejercicios que aparecen al principio, usted ver\'a que en verdad ha aprendido bastante material aun cuando el material que est\'e estudiando actualmente le parezca impenetrable.
 
-Usually when you are learning your first programming language, there are a few
-wonderful ``Ah-Hah!'' moments where you can look up from pounding away at some rock
-with a hammer and chisel and step away and see that you are indeed building 
-a beautiful sculpture.
+Generalmente cuando se est\'a aprendiendo el primer lenguage de programaci\'on, hay ciertos momentos maravillosos de luz donde usted puede contemplar la escultura despu\'es de haber estado martillando una roca.
 
 If something seems particularly hard, there is usually no value in staying up all 
 night and staring at it.   Take a break, take a nap, have a snack, explain what you 
