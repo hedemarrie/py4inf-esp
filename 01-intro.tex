@@ -440,64 +440,38 @@ sino que nos comunicamos {\em a trav\'es} de Python.
 
 \section{Los bloques de construcci\'on de un programa}
 
-In the next few chapters, we will learn more about the vocabulary, sentence structure,
-paragraph structure, and story structure of Python.  We will learn about the powerful
-capabilities of Python and how to compose those capabilities together to create useful
-programs.
+En los pro\'oximo cap\'itulos, aprenderemos m\'as sore el vocabulario, estructura de las frases, estructura de los p\'arrafos y la estructura de Python. Aprenderemos sobre las poderosas capacidades de Python y c\'omo aprovechar esas capacidades en la creaci\'on de programas \'utiles.
 
-There are some low-level conceptual patterns that we use to construct programs.  These
-constructs are not just for Python programs, they are part of every programming language
-from machine language up to the high-level languages.
+Hay algunos patrones conceptuales de bajo nivel que se usan para escribir programas. Estos no son solo para programas en Python, son parte de todo lenguage de programaci\'on desde lenguage de m\'aquina hasta lenguages de alto nivel.
 
 \begin{description}
 
-\item[input:] Get data from the ``outside world''.  This might be 
-reading data from a file, or even some kind of sensor like 
-a microphone or GPS.  In our initial programs, our input will come from the user
-typing data on the keyboard.
+\item[input:] Toma datos del ``mundo exterior''. Esto puede ser leer datos de un archivo o quiz\'a un tipo de sensor como un micr\'ofono o GPS. En nuestros programas iniciales, nuestro ``input'' vendr\'a del teclado del usuario al escribir.
 
-\item[output:] Display the results of the program on a screen
-or store them in a file or perhaps write them to a device like a
-speaker to play music or speak text.
+\item[output:] Desplegar los resultado del programa en la pantalla o almacenarlos en un archivo, o quiz\'a escribirlos en un dispositivo como parlante de m\'usica o texto de voz.
 
-\item[sequential execution:] Perform statements one after
-another in the order they are encountered in the script.
+\item[sequential execution:] Realizar enunciados uno tras otro en el orden que los encuentre en el gui\'on.
 
-\item[conditional execution:] Check for certain conditions and
-execute or skip a sequence of statements.
+\item[conditional execution:] Revisar ciertas condiciones y ejecutar o saltar un secuencia de enunciados.
 
-\item[repeated execution:] Perform some set of statements 
-repeatedly, usually with
-some variation.
+\item[repeated execution:] Realizar alguna serie de enunciados repetidamente, generalmente con alguna variaci\'on.
 
-\item[reuse:] Write a set of instructions once and give them a name
-and then reuse those instructions as needed throughout your program.
+\item[reuse:] Escriba una serie de instrucciones una sola vez y darles un nombre y despu\'es reusarlas en la medida en que se necesiten a lo largo del programa.
 
 \end{description}
 
-It sounds almost too simple to be true and of course it is never
-so simple.  It is like saying that walking is simply
-``putting one foot in front of the other''.  The ``art'' 
-of writing a program is composing and weaving these
-basic elements together many times over to produce something
-that is useful to its users.
+Pareciera que es demasiado simple para ser verdad y por supuesto que nunca las cosas resultan tan simple. Es como decir que caminar es simplemente
+``colocar un pies despu\'es del otro''. El ``arte'' 
+de escribir un programa es componer y enlazar estos elementos b\'asicos muchas veces seguidas para producir algo que sea de utilidad para los usuarios.
 
-The word counting program above directly uses all of 
-these patterns except for one.
+El programa de contar palabras descrito arriba utiliza directamente todos estos patrones a excepci\'on de uno.
 
 \section{?`Qu\'e podr\'ia salir mal?}
 
-As we saw in our earliest conversations with Python, we must
-communicate very precisely when we write Python code.  The smallest
-deviation or mistake will cause Python to give up looking at your
-program.
+Como vimos en nuestras primeras conversaciones con Python, debemos ser muy precisos al comunicar cuando escribimos c\'odigo en Python. La m\'as m\'inima desviaci\'on o error causar\'a que Python no siga leyendo su programa.
 
-Beginning programmers often take the fact that Python leaves no
-room for errors as evidence that Python is mean, hateful and cruel.
-While Python seems to like everyone else, Python knows them 
-personally and holds a grudge against them.  Because of this grudge,
-Python takes our perfectly written programs and rejects them as 
-``unfit'' just to torment us.
+Los programadores principiantes a menudo toman el hecho de que Python no tiene tolerancia para errores como evidencia de que Python es mezquino, odioso y cruel.
+Mientras que pareciera que Python gusta de todos los dem\'as, Python los conoce personalmente y se reciente. Por este resentimiento, Python toma nuestro programa perfectamente escrito y lo rechaza como si no fuera ``id\'oneo'' solo para tormentarnos.
 
 \beforeverb
 \begin{verbatim}
@@ -525,55 +499,29 @@ SyntaxError: invalid syntax
 \end{verbatim}
 \afterverb
 %
-There is little to be gained by arguing with Python.  It is a tool,
-it has no emotion and it is happy and ready to serve you whenever you
-need it.  Its error messages sound harsh, but they are just Python's
-call for help.  It has looked at what you typed, and it simply cannot
-understand what you have entered.
+Nada se gana con argumentar con Python. Es una herramienta,
+no tiene emociones y est\'a feliz y listo para servirlo a usted cuando lo necesite. Sus mensajes de errores suenan cruel, pero son solo la manera de Python pedir ayuda. Ha mirado lo que usted ha escrito y sencillamente no puede entender lo que lee.
 
-Python is much more like a dog, loving you unconditionally, having a few
-key words that it understands, looking you with a sweet look on its
-face ({\tt >>>}) and waiting for you to say something it understands.
-When Python says ``SyntaxError: invalid syntax'', it is simply wagging
-its tail and saying, ``You seemed to say something but I just don't
-understand what you meant, but please keep talking to me ({\tt >>>}).''
+Python es much m\'as como un perro, amoroso incondicionalemnte, que se comunica con unas pocas palabras clave que entiende, mir\;andolo con una mirada dulce en su cara ({\tt >>>}) y esperando que usted diga algo que pueda entender.
+Cuando Python dice ``SyntaxError: invalid syntax'', est\'a simplemente moviendo su cola y diciendo , ``Parece que usted est\'a diciendo algo, pero yo no entiendo lo que quiere decir, pero por favor siga hablando conmigo ({\tt >>>}).''
 
-As your programs become increasingly sophisticated, you will encounter three 
-general types of errors:
+En la medida que sus programas se vuelvan m\'as sofisticados, usted encontrar\'a tres tipos de errores en general:
 
 \begin{description}
 
-\item[Syntax errors:] These are the first errors you will make and the easiest
-to fix.  A syntax error means that you have violated the ``grammar'' rules of Python.
-Python does its best to point right at the line and character where 
-it noticed it was confused.  The only tricky bit of syntax errors is that sometimes
-the mistake that needs fixing is actually earlier in the program than where Python
-{\em noticed} it was confused.  So the line and character that Python indicates in 
-a syntax error may just be a starting point for your investigation.
+\item[Syntax errors:] Estos son los primeros errores que usted har\'a y los m\'as f\'aciles de arreglar. Un error sint\'actico (syntax error) significa que usted ha violado las reglas de ``gram\'atica'' de Python.
+Python hace lo mejor que puede para mostrar la l\'inea y letra donde nota que hay un problema. La \'unica parte complicada de los errores sint\'acticos es que algunas veces el error que se necesita corregir est\'a realmente m\'as arriba de donde Python 
+{\em muestra} que hubo un error. As\'i que la l\'inea y la letra que Python indica en donde se encuentra el error sint\'actico (syntax error) puede ser solo un punto de partida para su investigaci\'on.
 
-\item[Logic errors:] A logic error is when your program has good syntax but there is a mistake 
-in the order of the statements or perhaps a mistake in how the statements relate to one another.
-A good example of a logic error might be, ``take a drink from your water bottle, put it 
-in your backpack, walk to the library, and then put the top back on the bottle.''
+\item[Logic errors:] Un error de l\'ogica es cuando su programa est\'a bien sint\'acticamente pero hay un error en el orden de los enunciados o quiz\'as un error en la relaci\'on de los enunciados entre uno y uno. Un buen ejemplo de error de l\'ogica podr\'ia ser, ``tome agua de su botella de agua, pongala en su mochila, camine a la biblioteca y luego ponga la tapa en la botella.''
 
-\item[Semantic errors:] A semantic error is when your description of the steps to take 
-is syntactically perfect and in the right order, but there is simply a mistake in 
-the program.  The program is perfectly correct but it does not do what
-you {\em intended} for it to do. A simple example would
-be if you were giving a person directions to a restaurant and said, ``... when you reach
-the intersection with the gas station, turn left and go one mile and the restaurant
-is a red building on your left.''.  Your friend is very late and calls you to tell you that
-they are on a farm and walking around behind a barn, with no sign of a restaurant.  
-Then you say ``did you turn left or right at the gas station?'' and 
-they say, ``I followed your directions perfectly, I have 
-them written down, it says turn left and go one mile at the gas station.''.  Then you say,
-``I am very sorry, because while my instructions were syntactically correct, they 
-sadly contained a small but undetected semantic error.''. 
+\item[Semantic errors:] Un error de sem\'antica es cuando su descripci\'on de los pasos a tomar est\'a sint\'acticamente correcta pero y en el orden adecuado, pero hay simplemente un error en el programa. El programa est\'a perfectamente bien pero no hace los que usted {\em intentaba} que realizara. Un ejemplo simple ser\'ia si usted le da indicaciones a una persona para llegar a un restaurante y le dice, ``... cuando llegue a la intersecci\'on de la estaci\'on de gasolina, cruce a la izquierda y vaya una milla y el restaurante es un edificio rojo a su izquierda.'' Su amigo va tarde y lo llama a usted y le dice que est\'a en una finca y est\'a caminando alrededor de un establo sin ning\'un letrero de restaurante.  
+Luego usted pregunta si ``cruzaron a la izquierda o a la dereha en la estaci\'on de gasolina'' y la respuesta es, ``Yo segu\'i sus indicaciones al pie de la letra, las tengo escritas, dice que cruce a la izquierda y vaya una milla en la estaci\'on de gasolina.'' Luego, usted dice,
+``Lo siento, aunque mis indicaciones estaban sint\'acticamente correctas, lastimosamente conten\'ian un peque\~no error sem\'antico.'' 
 
 \end{description}
 
-Again in all three types of errors, Python is merely trying its hardest to 
-do exactly what you have asked.
+Una vez m\'as, en los tres tipos de errores, Python est\'a meramente tratando de hacer lo mejor para darle los resultados que usted le ha pedido.
 
 \section{La jornada de aprendizaje}
 
