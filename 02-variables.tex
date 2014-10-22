@@ -1,29 +1,25 @@
 % LaTeX source for ``Python for Informatics: Exploring Information''
 % Copyright (c)  2010-  Charles R. Severance, All Rights Reserved
 
-\chapter{Variables, expressions and statements}
+\chapter{Variables, expresiones y afirmaciones}
 
-\section{Values and types}
+\section{Valores y tipos}
 \index{value}
 \index{type}
 \index{string}
 
-A {\bf value} is one of the basic things a program works with,
-like a letter or a
-number.  The values we have seen so far
-are {\tt 1}, {\tt 2}, and
+Un {\bf valor} es una de las cosas b\'asicas con las que un programa trabaja tales como una letra o un n\'umero.  Los valores que hemos visto hasta ahora son {\tt 1}, {\tt 2}, y
 \verb"'Hello, World!'".
 
-These values belong to different {\bf types}:
-{\tt 2} is an integer, and \verb"'Hello, World!'" is a {\bf string},
-so-called because it contains a ``string'' of letters.
-You (and the interpreter) can identify
-strings because they are enclosed in quotation marks.
+Estos valores pertenecen a diferentes {\bf tipos}:
+{\tt 2} es un n\'umero entero y \verb"'Hello, World!'" es una {\bf cadena de texto},
+llamada as\'i por cuanto contiene una cadena (string) de letras.
+Usted (y el int\'erprete) puede identificar cadenas de texto porque se encierran entre comillas (quotation mark).
 
 \index{quotation mark}
 
-The {\tt print} statement also works for integers.  We use the 
-{\tt python} command to start the interpreter.
+El comando {\tt print} tambi\'en funciona para n\'umeros enteros.  Nosotros usamos el comando  
+{\tt python} para ejecutar el int\'erprete.
 
 \beforeverb
 \begin{verbatim}
@@ -33,7 +29,7 @@ python
 \end{verbatim}
 \afterverb
 %
-If you are not sure what type a value has, the interpreter can tell you.
+Si usted no tiene la seguridad de qu\'e valor tiene un tipo, el int\'erprete le puede decir.
 
 \beforeverb
 \begin{verbatim}
@@ -44,11 +40,8 @@ If you are not sure what type a value has, the interpreter can tell you.
 \end{verbatim}
 \afterverb
 %
-Not surprisingly, strings belong to the type {\tt str} and
-integers belong to the type {\tt int}.  Less obviously, numbers
-with a decimal point belong to a type called {\tt float},
-because these numbers are represented in a
-format called {\bf floating-point}.
+No cabe duda que las cadenas de texto (strings) pertenecen al tipo {\tt str} y los enteros pertenecen al tipo {\tt int}.  Menos obvio son los n\'umeros con puntos decimales que pertenecen al tipo llamado {\tt float}
+porque estos n\'umeros se representan en un formato llamado {\bf floating-point}.
 
 \index{type}
 \index{string type}
@@ -65,9 +58,7 @@ format called {\bf floating-point}.
 \end{verbatim}
 \afterverb
 %
-What about values like \verb"'17'" and \verb"'3.2'"?
-They look like numbers, but they are in quotation marks like
-strings.
+En cuanto a valores como \verb"'17'" y \verb"'3.2'", aunque parecen n\'umeros, se encuentran entre comillas como cadenas de texto. 
 
 \index{quotation mark}
 
@@ -80,11 +71,9 @@ strings.
 \end{verbatim}
 \afterverb
 %
-They're strings.
+Estas son cadenas (strings).
 
-When you type a large integer, you might be tempted to use commas
-between groups of three digits, as in {\tt 1,000,000}.  This is not a
-legal integer in Python, but it is legal:
+Cuando usted escribe un entero grande, puede tener la tentaci\'on de usar comas entre grupos de tres d\'igitos como en {\tt 1,000,000}. Esto no es correcto escribirlo como un entero legal en Python, pero s\'i es correcto:
 
 \beforeverb
 \begin{verbatim}
@@ -93,17 +82,14 @@ legal integer in Python, but it is legal:
 \end{verbatim}
 \afterverb
 %
-Well, that's not what we expected at all!  Python interprets {\tt
-  1,000,000} as a comma-separated sequence of integers, which it
-prints with spaces between.
+Bien, esto no es lo que esperamos. Python int\'erpreta {\tt
+  1,000,000} como una secuencia de enteros separada por una coma, lo cual se imprime con spacios entre si.
 
 \index{semantic error}
 \index{error!semantic}
 \index{error message}
 
-This is the first example we have seen of a semantic error: the code
-runs without producing an error message, but it doesn't do the
-``right'' thing.
+Este es el primer ejemplo que tenemos de error de sem\'antica: el c\'odigo se ejecuta sin reportar error, pero no hace lo ``correcto''.
 
 
 \section{Variables}
@@ -111,27 +97,22 @@ runs without producing an error message, but it doesn't do the
 \index{assignment statement}
 \index{statement!assignment}
 
-One of the most powerful features of a programming language is the
-ability to manipulate {\bf variables}.  A variable is a name that
-refers to a value.
+Una de las caracter\'isticas m\'as poderosas de un lenguage de programaci\'on es la capacidad de manipular  {\bf variables}. Una es un nombre que se refiere a un valor.
 
-An {\bf assignment statement} creates new variables and gives
-them values:
+Una {\bf declaraci\'on} crea nuevas variables y asigna valores:
 
 \beforeverb
 \begin{verbatim}
->>> message = 'And now for something completely different'
+>>> message = 'Y ahora para algo completamente diferente'
 >>> n = 17
 >>> pi = 3.1415926535897931
 \end{verbatim}
 \afterverb
 %
-This example makes three assignments.  The first assigns a string
-to a new variable named {\tt message};
-the second assigns the integer {\tt 17} to {\tt n}; the third
-assigns the (approximate) value of $\pi$ to {\tt pi}.
+Este ejemplo establece tres valores. La primera asigna una cadena a una nueva variable llamada {\tt message};
+la segunda asigna un entero {\tt 17} a {\tt n}; la tercera asigna el valor (aproximado) de $\pi$ a {\tt pi}.
 
-To display the value of a variable, you can use a print statement:
+Para desplegar el valor de una variable, usted puede usar un comando para imprimir:
 
 \beforeverb
 \begin{verbatim}
@@ -142,7 +123,7 @@ To display the value of a variable, you can use a print statement:
 \end{verbatim}
 \afterverb
 %
-The type of a variable is the type of the value it refers to.
+El tipo de variable es el tipo de valor al que se refiere.
 
 \beforeverb
 \begin{verbatim}
