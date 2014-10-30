@@ -190,7 +190,7 @@ def       for       lambda    try
 %
 Usted querr\'a mantener a la mano esta lista.  Si el int\'erprete le da un error sobre alguna de sus variables y no sabe porqu\'e, busque si la palabra que le da error aparece en esta lista.
 
-\section{Afirmaciones o "Statements"}
+\section{Afirmaciones o ``Statements"}
 
 Una afirmaci\'on o {\bf statement} es una unidad de c\'odigo que le int\'erprete de Python puede ejecutar. Hemos visto dos tipos de "statements": print
 y assignment.
@@ -201,9 +201,9 @@ y assignment.
 
 Cuando usted escribe una afirmaci\'on o "statement" en modo interactivo, el int\'erprete la ejecuta y despliega el resultado, si lo hay.
 
-Un "script" generalmente contiene una secuencia de afirmaciones o "statements". Si hay m\'as de una afirmaci\'on (o statement), el resultado aparace uno a uno en la medida en que son ejectutados.
+Un ``script" generalmente contiene una secuencia de afirmaciones o "statements". Si hay m\'as de una afirmaci\'on (o statement), el resultado aparace uno a uno en la medida en que son ejectutados.
 
-Por ejemplo, el script
+Por ejemplo, el script:
 
 \beforeverb
 \begin{verbatim}
@@ -225,7 +225,7 @@ produce el siguiente output
 El statement asignado no produce output.
 
 
-\section{Operators and operands}
+\section{Operadores y operandos}
 \index{operator, arithmetic}
 \index{arithmetic operator}
 \index{operand}
@@ -233,9 +233,9 @@ El statement asignado no produce output.
 
 {\bf Operators} u operadores son s\'imbolos especiales que representan computaci\'on como suma y multiplicaci\'on. El valor al que el operador es aplicado se le llama operando u {\bf operands}.
 
-The operators {\tt +}, {\tt -}, {\tt *}, {\tt /} and {\tt **}
-perform addition, subtraction, multiplication, division and
-exponentiation, as in the following examples:
+Los operadores {\tt +}, {\tt -}, {\tt *}, {\tt /} and {\tt **}
+realizan suma, subtracci\'on, multiplicac\'oion, divisi\'on y
+exponentiac\'oion, como se muestra en los siguientes ejemplos:
 
 \beforeverb
 \begin{verbatim}
@@ -243,7 +243,7 @@ exponentiation, as in the following examples:
 \end{verbatim}
 \afterverb
 %
-The division operator might not do what you expect:
+Es posible que el operador de divisi\'on no haga lo que usted espera:
 
 \beforeverb
 \begin{verbatim}
@@ -253,12 +253,11 @@ The division operator might not do what you expect:
 \end{verbatim}
 \afterverb
 %
-The value of {\tt minute} is 59, and in conventional arithmetic 59
-divided by 60 is 0.98333, not 0.  The reason for the discrepancy is
-that Python is performing {\bf floor division}\footnote{In Python 3.0,
-the result of this division is a {\tt float}.  
-In Python 3.0, the new operator
-{\tt //} performs integer division.}.
+El valor de {\tt minute} es 59, y en aritm\'etica convencional 59
+dividido por 60 es 0.98333 y no 0.  La raz\'on de la discrepancia es que Python est\'a realizando {\bf floor division}\footnote{En Python 3.0,
+el resultado de esta divisi\'on es un {\tt float}.  
+En Python 3.0, el nuevo operador
+{\tt //} realiza divisi\'o de enteros.}.
 
 \index{Python 3.0}
 \index{floor division}
@@ -266,12 +265,10 @@ In Python 3.0, the new operator
 \index{division!floor}
 \index{division!floating-point}
 
-When both of the operands are integers, the result is also an
-integer; floor division chops off the fraction
-part, so in this example it rounds down to zero.
+Cuando ambos operandos son n\'umeros enteros, el resultado es tambi\'en un entero, ``floor division'' parte la fracci\'on, as\'i que en este ejemplo lo redondea a cero.
 
-If either of the operands is a floating-point number, Python performs
-floating-point division, and the result is a {\tt float}:
+Si alguno de los operandos es un decimal o ``floating-point number'', Python realiza una 
+divisi\'on de punto flotante (floating-point division), y el resultado es un flotante o {\tt float}:
 
 \beforeverb
 \begin{verbatim}
@@ -281,7 +278,7 @@ floating-point division, and the result is a {\tt float}:
 \afterverb
 
 
-\section{Expressions}
+\section{Expresiones}
 
 An {\bf expression} is a combination of values, variables, and operators.
 A value all by itself is considered an expression, and so is
