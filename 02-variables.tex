@@ -137,28 +137,21 @@ El tipo de variable es el tipo de valor al que se refiere.
 \afterverb
 %
 
-\section{Variable names and keywords}
+\section{Nombre de variable y palabras clave}
 \index{keyword}
 
-Programmers generally choose names for their variables that
-are meaningful---they document what the variable is used for.
+Los programadores generalmente escogen nombres para que sean significativos para sus variables ya que estos nombres documentan  para qu\'e son usadas las variables.
 
-Variable names can be arbitrarily long.  They can contain
-both letters and numbers, but they have to begin with a letter.
-It is legal to use uppercase letters, but it is a good idea
-to begin variable names with a lowercase letter (you'll
-see why later).
+Los nombres de variable pueden ser arbitrariamente largas, pueden contener tanto letras como n\'umeros, pero deben comenzar con una letra. Es correcto utilizar may\'usculas, pero es mejor comenzar el nombre de una variable con letra min\'uscula(Usted podra apreciar porqu\'e m\'as adelante).
 
-The underscore character (\verb"_") can appear in a name.
-It is often used in names with multiple words, such as
-\verb"my_name" or \verb"airspeed_of_unladen_swallow".
-Variable names can start with an underscore character, but
-we generally avoid using it unles we are writing library 
-code for others to use.
+El signo de subrayar (\verb"_") puede aparecer en el nombre de la variable.
+A menudo se utiliza en nombres de multiples palabras, como
+\verb"mi_nombre" o \verb"aerodinamica-de-la-masa".
+Los nombres de variable pueden empezar con un car\'acter de subrayado, pero generalmente se evita el uso a menos que se escriba c\'odigo bibliotecario para que otros lo usen.
 
-\index{underscore character}
+\index{car\'acter de subrayado (underscore character)}
 
-If you give a variable an illegal name, you get a syntax error:
+Si usted le da un nombre ilegal a una variable, le aparecer\'a un error sint\'actico:
 
 \beforeverb
 \begin{verbatim}
@@ -171,18 +164,17 @@ SyntaxError: invalid syntax
 \end{verbatim}
 \afterverb
 %
-{\tt 76trombones} is illegal because it does not begin with a letter.
-{\tt more@} is illegal because it contains an illegal character, {\tt
-@}.  But what's wrong with {\tt class}?
+{\tt 76trombones} es ilegal porque no comienza con una letra.
+{\tt more@} es ilegal porque contiene un car\'actere ilegal, {\tt
+@}.  Pero qu\'e tiene de malo {\tt class}?
 
-It turns out that {\tt class} is one of Python's {\bf keywords}.  The
-interpreter uses keywords to recognize the structure of the program,
-and they cannot be used as variable names.
+Resulta que {\tt class} es una de las {\bf palabras clave (keywords)} de Python.  El int\'erprete utiliza palabras clave (keywords) para reconocer la estructura del programa,
+y no se pueden utilizar para nombrar variables.
 
 \index{keyword}
 
-Python reserves 31 keywords\footnote{In Python 3.0, {\tt exec} is no
-longer a keyword, but {\tt nonlocal} is.} for its use:
+Python reserva 31 palabras clave o keywords\footnote{En Python 3.0, {\tt exec} ya no
+se considera una palabra clave o keyword, pero {\tt nonlocal} s\'i.} para su uso:
 
 \beforeverb
 \begin{verbatim}
@@ -196,28 +188,22 @@ def       for       lambda    try
 \end{verbatim}
 \afterverb
 %
-You might want to keep this list handy.  If the interpreter complains
-about one of your variable names and you don't know why, see if it
-is on this list.
+Usted querr\'a mantener a la mano esta lista.  Si el int\'erprete le da un error sobre alguna de sus variables y no sabe porqu\'e, busque si la palabra que le da error aparece en esta lista.
 
-\section{Statements}
+\section{Afirmaciones o "Statements"}
 
-A {\bf statement} is a unit of code that the Python interpreter can
-execute.  We have seen two kinds of statements: print
-and assignment.
+Una afirmaci\'on o {\bf statement} es una unidad de c\'odigo que le int\'erprete de Python puede ejecutar. Hemos visto dos tipos de "statements": print
+y assignment.
 
 \index{statement}
 \index{interactive mode}
 \index{script mode}
 
-When you type a statement in interactive mode, the interpreter
-executes it and displays the result, if there is one.
+Cuando usted escribe una afirmaci\'on o "statement" en modo interactivo, el int\'erprete la ejecuta y despliega el resultado, si lo hay.
 
-A script usually contains a sequence of statements.  If there
-is more than one statement, the results appear one at a time
-as the statements execute.
+Un "script" generalmente contiene una secuencia de afirmaciones o "statements". Si hay m\'as de una afirmaci\'on (o statement), el resultado aparace uno a uno en la medida en que son ejectutados.
 
-For example, the script
+Por ejemplo, el script
 
 \beforeverb
 \begin{verbatim}
@@ -227,7 +213,7 @@ print x
 \end{verbatim}
 \afterverb
 %
-produces the output
+produce el siguiente output
 
 \beforeverb
 \begin{verbatim}
@@ -236,7 +222,7 @@ produces the output
 \end{verbatim}
 \afterverb
 %
-The assignment statement produces no output.
+El statement asignado no produce output.
 
 
 \section{Operators and operands}
@@ -245,9 +231,7 @@ The assignment statement produces no output.
 \index{operand}
 \index{expression}
 
-{\bf Operators} are special symbols that represent computations like
-addition and multiplication.  The values the operator is applied to
-are called {\bf operands}.
+{\bf Operators} u operadores son s\'imbolos especiales que representan computaci\'on como suma y multiplicaci\'on. El valor al que el operador es aplicado se le llama operando u {\bf operands}.
 
 The operators {\tt +}, {\tt -}, {\tt *}, {\tt /} and {\tt **}
 perform addition, subtraction, multiplication, division and
