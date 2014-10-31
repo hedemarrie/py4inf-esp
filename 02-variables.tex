@@ -710,86 +710,73 @@ is not the same thing!  There is no way for Python
 to know what you meant to write, so in this case you don't
 get an error message; you just get the wrong answer.
 
-\index{order of operations}
+\index{orden de operaciones}
 
 
-\section{Glossary}
+\section{Glosario}
 
 \begin{description}
 
-\item[assignment:]  A statement that assigns a value to a variable.
-\index{assignment}
+\item[assignment o asignatura:]  Una afirmaci\'on que asigna un valor a una variable.
+\index{assignment o asignatura}
 
 \item[concatenate:]  To join two operands end-to-end.
 \index{concatenation}
 
-\item[comment:]  Information in a program that is meant for other
-programmers (or anyone reading the source code) and has no effect on the
-execution of the program.
-\index{comment}
+\item[comentario:]  Informaci\'on en un programa con el prop\'osito de informar a otros programadores (o cualquiera que lea el c\'odigo fuente) y que no tiene efecto alguno en la ejecuci\'on del programa.
+\index{comentario}
 
-\item[evaluate:]  To simplify an expression by performing the operations
-in order to yield a single value.
+\item[evaluar:]  Simplificar una expresi\'on al realizar las operaciones para obtener un solo valor.
 
-\item[expression:]  A combination of variables, operators, and values that
-represents a single result value.
-\index{expression}
+\item[expression o expresi\'on:]  Una combinaci\'on de variables, operadores y valores que
+representa un resultado de valor singular.
+\index{expression o expresi\'on}
 
-\item[floating-point:] A type that represents numbers with fractional
-parts.
-\index{floating-point}
+\item[floating-point o punto flotante:] Un tipo que representa n\'umeros con partes en fracciones.
+\index{floating-point o punto flotante}
 
-\item[floor division:] The operation that divides two numbers and chops off
-the fraction part.
+\item[floor division:] La operaci\'on que divide dos n\'umeros y parte la secci\'on de la fracci\'on.
 \index{floor division}
 
-\item[integer:] A type that represents whole numbers.
-\index{integer}
+\item[integer o n\'umero entero:] Un tipo que representa n\'umeros enteros.
+\index{integer o n\'umero entero}
 
-\item[keyword:]  A reserved word that is used by the compiler to parse a
-program; you cannot use keywords like {\tt if}, {\tt  def}, and {\tt while} as
-variable names.
-\index{keyword}
+\item[keyword o palabra clave:]  Una palabra reservada que usa el compilador para analizar un programa. Usted no puede usar palabras claves como {\tt if}, {\tt  def}, y {\tt while} para nombrar
+variables.
+\index{keyword o palabra clave}
 
-\item[mnemonic:] A memory aid. We often give variables mnemonic names
-to help us remember what is stored in the variable.
-\index{mnemonic}
+\item[mnemot\'ecnicas:] Una ayuda para recordar. A menudo damos a las variables nombres con menmot\'ecnicas para ayudarnos a recordar lo que se almacena en la variable.
+\index{mnemot\'ecnica}
 
-\item[modulus operator:]  An operator, denoted with a percent sign
-({\tt \%}), that works on integers and yields the remainder when one
-number is divided by another.
-\index{modulus operator}
+\item[modulus operator o m\'odulo operador:]  Un operador denotado con un signo de porcentaje
+({\tt \%}), que funciona en n\'umeros enteros y deja un residuo cuando un n\'umero es dividido por otro.
+\index{modulus operator o m\'odulo operador}
 \index{operator!modulus}
 
-\item[operand:]  One of the values on which an operator operates.
-\index{operand}
+\item[operando:]  Uno de los valores en el que un operador opera.
+\index{operando}
 
-\item[operator:]  A special symbol that represents a simple computation like
-addition, multiplication, or string concatenation.
-\index{operator}
+\item[operador:]  Un s\'imbolo especial que representa un calculo simple como suma, multiplicaci\'on o concatenaci\'on de cadenas (string).
+\index{operador}
 
-\item[rules of precedence:]  The set of rules governing the order in which
-expressions involving multiple operators and operands are evaluated.
-\index{rules of precedence}
+\item[reglas de precedencia:]  La serie de reglas que gobieran el orden en el cual se eval\'uan las expresiones que involucran m\'ultiples operadores y operandos.
+\index{rules of precedence o reglas de precedencia}
 \index{precedence}
 
-\item[statement:]  A section of code that represents a command or action.  So
-far, the statements we have seen are assignments and print statements.
+\item[statement o afirmaci\'on:]  Un segmento de c\'odigo que representa un comando o acci\'on. Hasta ahora, las afirmaciones que hemos visto son asignaturas y comandos de impresi\'on (print statements).
 \index{statement}
 
-\item[string:] A type that represents sequences of characters.
+\item[string o cadena:] Un tipo que representa una secuencia de car\'acteres.
 \index{string}
 
-\item[type:] A category of values.  The types we have seen so far
-are integers (type {\tt int}), floating-point numbers (type {\tt
-float}), and strings (type {\tt str}).
+\item[tipo:] Una categoria de valores.  Los tipos que hemos visto hasta ahora son n\'umeros enteros (tipo {\tt int}), punto flotante (n\'umero decimal) (type {\tt
+float}), y cadena o ``strings'' (type {\tt str}).
 \index{type}
 
-\item[value:]  One of the basic units of data, like a number or string, 
-that a program manipulates.
+\item[valor:]  Uno de las unidades b\'asicas de datos, como un n\'umero o una cadena de palabras que un programa manipula.
 \index{value}
 
-\item[variable:]  A name that refers to a value.
+\item[variable:]  Un nombre que se refiere a un valor.
 \index{variable}
 
 \end{description}
@@ -797,8 +784,7 @@ that a program manipulates.
 \section{Exercises}
 
 \begin{ex}
-Write a program that uses  \verb"raw_input" to prompt a user for their name 
-and then welcomes them.
+Escriba un programa que use \verb"raw_input" que requiera que el usuario entre su nombre y luego le de la bienvenida.
 
 \begin{verbatim}
 Enter your name: Chuck
@@ -808,8 +794,7 @@ Hello Chuck
 \end{ex}
 
 \begin{ex}
-Write a program to prompt the user for hours and rate per hour to compute
-gross pay.
+Escriba un programa que requiera del usuario entrar las horas y el valor por hora para calcular el pago total.
 \begin{verbatim}
 Enter Hours: 35
 Enter Rate: 2.75
@@ -817,21 +802,17 @@ Pay: 96.25
 \end{verbatim}
 \end{ex}
 %
-We won't worry about making sure our pay has exactly two digits after
-the decimal place for now.  If you want, you can play with the 
-built-in Python {\tt round} function to properly round the resulting pay
-to two decimal places.
+No nos preocuparemos de que el salario tenga exactamente dos d\'igitos despu\'es del decimal, por ahora. Si usted quiere, puede ensayar con las functiones integradas de Python {\tt round} para redondear apropiadamente el resultado del pago en dos espacios decimales.
 
 \begin{ex}
-Assume that we execute the following assignment statements:
+Asuma que ejecutamos la siguiente asignaci\'on de las afirmaciones:
 
 \begin{verbatim}
 width = 17
 height = 12.0
 \end{verbatim}
 
-For each of the following expressions, write the value of the
-expression and the type (of the value of the expression).
+Para cada una de las siguientes expresiones, escriba el valor de la expresi\'on y el tipo del valor de la expresi\'on.
 
 \begin{enumerate}
 
@@ -845,13 +826,12 @@ expression and the type (of the value of the expression).
 
 \end{enumerate}
 
-Use the Python interpreter to check your answers.
+Use el int\'erprete de Python para verificar sus respuestas.
 \end{ex}
 
 \begin{ex}
-Write a program which prompts the user for a Celsius temperature,
-convert the temperature to Fahrenheit and print out the converted
-temperature.
+Escriba un programa que requiera que el usuario entre la temperatura en celsius,
+convierta la medida a Fahrenheit e imprima el resultado de la temperatura que ha sido convertida.
 \end{ex}
 
 
