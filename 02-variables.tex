@@ -280,15 +280,10 @@ divisi\'on de punto flotante (floating-point division), y el resultado es un flo
 
 \section{Expresiones}
 
-<<<<<<< HEAD
+
 Una {\bf expresi\'on} es una combinaci\'on de valores, variables y operadores.
 Un valor por s\'i mismo se considera una expresi\'on y as\'i mismo una variable, por esta raz\'on las siguientes son todas expresiones legales(asumiendo que a la variable {\tt x} se le ha asignada un valor):
-=======
-An {\bf expression} is a combination of values, variables, and operators.
-A value all by itself is considered an expression, and so is
-a variable, so the following are all legal expressions
-(assuming that the variable {\tt x} has been assigned a value):
->>>>>>> origin/master
+
 
 \index{expression}
 \index{evaluate}
@@ -301,13 +296,10 @@ x + 17
 \end{verbatim}
 \afterverb
 %
-<<<<<<< HEAD
+
 Si usted escribe una expresi\'on en modo interactivo, el int\'erprete lo
 {\bf eval\'ua} y despliega el resultado:
-=======
-If you type an expression in interactive mode, the interpreter
-{\bf evaluates} it and displays the result:
->>>>>>> origin/master
+
 
 \beforeverb
 \begin{verbatim}
@@ -316,20 +308,15 @@ If you type an expression in interactive mode, the interpreter
 \end{verbatim}
 \afterverb
 %
-<<<<<<< HEAD
+
 Pero en un ``script'', una expresi\'on por s\'i misma no hace nada. Esto es una fuente de confusi\'on muy com\'un para principiantes.
 
 \begin{ex}
 Escriba la siguiente afirmaci\'on en el int\'erprete de Python para ver lo que hace:
-=======
-But in a script, an expression all by itself doesn't
-do anything!  This is a common
-source of confusion for beginners.
+
 
 \begin{ex}
-Type the following statements in the Python interpreter to see
-what they do:
->>>>>>> origin/master
+
 
 \beforeverb
 \begin{verbatim}
@@ -342,31 +329,23 @@ x + 1
 \end{ex}
 
 
-<<<<<<< HEAD
+
 \section{Orden de operaciones}
-=======
-\section{Order of operations}
->>>>>>> origin/master
+
 \index{order of operations}
 \index{rules of precedence}
 \index{PEMDAS}
 
-<<<<<<< HEAD
+
 Cuando aparece m\'as de un operador en una expresi\'on, el orden de evaluaci\'on depende de las reglas de las {\bf reglas de precedencia}.  Para operadores matem\'aticos, Python sigue convenci\'on matem\'atica.
 Las siglas {\bf PEMDAS} es una manera f\'acil de recordar las reglas:
-=======
-When more than one operator appears in an expression, the order of
-evaluation depends on the {\bf rules of precedence}.  For
-mathematical operators, Python follows mathematical convention.
-The acronym {\bf PEMDAS} is a useful way to
-remember the rules:
->>>>>>> origin/master
+
 
 \index{parentheses!overriding precedence}
 
 \begin{itemize}
 
-<<<<<<< HEAD
+
 \item {\bf P}ar\'entesis tiene la m\'as alta precedencia y se puede usar para obligar una expres\'on a evaluar en el orden que usted quiere. Siendo que las expresiones entre par\'entesis se eval\'uan primero, , {\tt 2 * (3-1)} es 4,
 y {\tt (1+1)**(5-2)} es 8. Usted tambi\'en puede usar par\'entesis para hacer una expresi\'on m\'as f\'acil de leer, como en  {\tt (minute * 100) / 60}, aunque el resultado no cambie.
 
@@ -385,7 +364,7 @@ la cual es mayor que {\bf A}ddici\'n y {\bf S}ubtracci\'n, la que tambi\'en tien
 Cuando tenga duda, siempre ponga par\'entesis en sus expresiones para asegurarse que la computaci\'on se realicen en el order que usted intenta.
 
 \section{Operador de m\'odulos (Modulus operator)}
-=======
+
 \item {\bf P}arentheses have the highest precedence and can be used 
 to force an expression to evaluate in the order you want. Since
 expressions in parentheses are evaluated first, {\tt 2 * (3-1)} is 4,
@@ -411,21 +390,16 @@ When in doubt always put parentheses in your expressions to make sure
 the computations are performed in the order you intend.
 
 \section{Modulus operator}
->>>>>>> origin/master
+r
 
 \index{modulus operator}
 \index{operator!modulus}
 
-<<<<<<< HEAD
+
 El {\bf ``modulus operator''} trabaja en n\'umeros enteros y deja el residuo cuando el primer operando se divide por el segundo. En Python, el 
 ``modulus operator'' es un signo de porcentaje (\verb"%").  The syntax is the same
 como para otros operadores:
-=======
-The {\bf modulus operator} works on integers and yields the remainder
-when the first operand is divided by the second.  In Python, the
-modulus operator is a percent sign (\verb"%").  The syntax is the same
-as for other operators:
->>>>>>> origin/master
+
 
 \beforeverb
 \begin{verbatim}
@@ -438,7 +412,7 @@ as for other operators:
 \end{verbatim}
 \afterverb
 %
-<<<<<<< HEAD
+
 De modo que 7 dividido por 3 es 2 con 1 de residuo.
 
 El ``modulus operator'' es sorpresivamente muy \'util. Por ejemplo, usted puede verificar si un n\'umero es divisible por otro---si
@@ -459,7 +433,7 @@ El operador {\tt +} funciona con una cadena o ``strings'', pero no es suma en el
 {\bf concatenaci\'on}, lo que significa que une las cadenas lig\'andolas as\'i:
 
 \index{concatenaci\'on}
-=======
+
 So 7 divided by 3 is 2 with 1 left over.
 
 The modulus operator turns out to be surprisingly useful.  For
@@ -500,15 +474,11 @@ linking them end-to-end.  For example:
 \end{verbatim}
 \afterverb
 %
-<<<<<<< HEAD
+
 El output de este programa es {\tt 100150}.
 
 \section{Pedir al usuario ``input''}
-=======
-The output of this program is {\tt 100150}.
 
-\section{Asking the user for input}
->>>>>>> origin/master
 \index{keyboard input}
 
 Sometimes we would like to take the value for a variable from the user
@@ -813,7 +783,7 @@ is not the same thing!  There is no way for Python
 to know what you meant to write, so in this case you don't
 get an error message; you just get the wrong answer.
 
-<<<<<<< HEAD
+
 \index{orden de operaciones}
 
 
@@ -823,22 +793,15 @@ get an error message; you just get the wrong answer.
 
 \item[assignment o asignatura:]  Una afirmaci\'on que asigna un valor a una variable.
 \index{assignment o asignatura}
-=======
+
 \index{order of operations}
 
 
-\section{Glossary}
-
-\begin{description}
-
-\item[assignment:]  A statement that assigns a value to a variable.
-\index{assignment}
->>>>>>> origin/master
 
 \item[concatenate:]  To join two operands end-to-end.
 \index{concatenation}
 
-<<<<<<< HEAD
+
 \item[comentario:]  Informaci\'on en un programa con el prop\'osito de informar a otros programadores (o cualquiera que lea el c\'odigo fuente) y que no tiene efecto alguno en la ejecuci\'on del programa.
 \index{comentario}
 
@@ -893,7 +856,7 @@ float}), y cadena o ``strings'' (type {\tt str}).
 \index{value}
 
 \item[variable:]  Un nombre que se refiere a un valor.
-=======
+
 \item[comment:]  Information in a program that is meant for other
 programmers (or anyone reading the source code) and has no effect on the
 execution of the program.
@@ -961,7 +924,7 @@ that a program manipulates.
 \index{value}
 
 \item[variable:]  A name that refers to a value.
->>>>>>> origin/master
+
 \index{variable}
 
 \end{description}
@@ -969,12 +932,10 @@ that a program manipulates.
 \section{Exercises}
 
 \begin{ex}
-<<<<<<< HEAD
+
 Escriba un programa que use \verb"raw_input" que requiera que el usuario entre su nombre y luego le de la bienvenida.
-=======
-Write a program that uses  \verb"raw_input" to prompt a user for their name 
-and then welcomes them.
->>>>>>> origin/master
+
+
 
 \begin{verbatim}
 Enter your name: Chuck
@@ -984,12 +945,10 @@ Hello Chuck
 \end{ex}
 
 \begin{ex}
-<<<<<<< HEAD
+
 Escriba un programa que requiera del usuario entrar las horas y el valor por hora para calcular el pago total.
-=======
-Write a program to prompt the user for hours and rate per hour to compute
-gross pay.
->>>>>>> origin/master
+
+
 \begin{verbatim}
 Enter Hours: 35
 Enter Rate: 2.75
@@ -997,32 +956,26 @@ Pay: 96.25
 \end{verbatim}
 \end{ex}
 %
-<<<<<<< HEAD
+
 No nos preocuparemos de que el salario tenga exactamente dos d\'igitos despu\'es del decimal, por ahora. Si usted quiere, puede ensayar con las functiones integradas de Python {\tt round} para redondear apropiadamente el resultado del pago en dos espacios decimales.
 
 \begin{ex}
 Asuma que ejecutamos la siguiente asignaci\'on de las afirmaciones:
-=======
-We won't worry about making sure our pay has exactly two digits after
-the decimal place for now.  If you want, you can play with the 
-built-in Python {\tt round} function to properly round the resulting pay
-to two decimal places.
+
 
 \begin{ex}
 Assume that we execute the following assignment statements:
->>>>>>> origin/master
+
 
 \begin{verbatim}
 width = 17
 height = 12.0
 \end{verbatim}
 
-<<<<<<< HEAD
+
 Para cada una de las siguientes expresiones, escriba el valor de la expresi\'on y el tipo del valor de la expresi\'on.
-=======
-For each of the following expressions, write the value of the
-expression and the type (of the value of the expression).
->>>>>>> origin/master
+
+
 
 \begin{enumerate}
 
@@ -1036,22 +989,19 @@ expression and the type (of the value of the expression).
 
 \end{enumerate}
 
-<<<<<<< HEAD
+
 Use el int\'erprete de Python para verificar sus respuestas.
 \end{ex}
 
 \begin{ex}
 Escriba un programa que requiera que el usuario entre la temperatura en celsius,
 convierta la medida a Fahrenheit e imprima el resultado de la temperatura que ha sido convertida.
-=======
+
 Use the Python interpreter to check your answers.
 \end{ex}
 
 \begin{ex}
-Write a program which prompts the user for a Celsius temperature,
-convert the temperature to Fahrenheit and print out the converted
-temperature.
->>>>>>> origin/master
+
 \end{ex}
 
 
