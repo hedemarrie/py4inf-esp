@@ -1,0 +1,696 @@
+% The contents of this file is 
+% Copyright (c) 2009-  Charles R. Severance, All Righs Reserved
+
+\chapter{?`Por qu\'e se debe aprender a programar?}
+
+Escribir programas (o programar) es una actividad muy creativa y gratificante. Usted puede escribir programas para ganarse la vida o para resolver un problema de an\'alisis dif\'icil o, simplemente por el placer de poder ayudar a alguien a enontrar soluciones. Este libro asume que \textbf{todos} necesitan saber c\'omo programar y, que una vez que se aprende, se descubre lo que se quiere lograr con la nueva destreza adquirida.  
+
+Estamos rodeados en nuestra vida diaria de computadoras que van desde p\'ortatiles a tel\'efonos celulares. Se puede pensar de estas computadoras como si fueran nuestros ``asistentes personales'', quienes realizan muchas de las tareas en nuestro lugar. El \textit{hardware} en las computadoras de hoy est\'an construidas esencialmente para que continuamente hagan la pregunta, 
+``?`Qu\'e quieres que haga despu\'es?''.
+
+\beforefig
+\centerline{\includegraphics[height=1.00in]{figs2/pda.eps}}
+\afterfig
+
+Los programadores agreagan un sistema operativo y una serie de aplicaciones al \textit{hardware} y nosotros terminamos con un Asistente Personal Digital muy \'util para diferentes cosas.
+
+Nuestras computadoras son r\'apidas y tienen una vasta cantidad de memoria y podr\'ian ser mucho m\'as si tan solo supi\'eramos el lenguage para hablarles y explicarles lo que quisi\'eramos que ``hagan despu\'es''. Si supi\'eramos este lenguage, podr\'iamos decirle a la computadora que haga tareas repetitivas en nuestro lugar. Interesantemente, el tipo de cosas que las computadoras hacen mejor, a menudo, son cosas que los humanos encontramos aburridas y abrumadoras.
+
+Por ejemplo, mire los tres primeros p\'arrafos de este cap\'itulo y d\'igame cu\'al es la palabra m\'as com\'un. Mientras que usted es capaz de leer y comprender las palabras en cuesti\'on de segundos, contarlas es doloroso porque no es el tipo de problema que la mente humana ha sido dise\~nada para resolver. Para una computadora es todo lo contrario, leer y comprender el texto de un pedazo de papel es dif\'icil para una computadora, pero contar las palabras y decirle a usted cu\'antas veces la palabra m\'as com\'un fue usada es muy f\'acil para la computadora:
+
+\beforeverb
+\begin{verbatim}
+python palabras.py
+Enter file:palabras.txt
+de 7
+\end{verbatim}
+\afterverb
+%
+Nuestro ``asistente personal de an\'alisis de informaci\'on'' nos dice r\'apidamente que la palabra ``de'' aparece 7 veces en los primeros tres p\'arrafos de este cap\'itulo.
+
+El hecho de que las computadoras sean tan buenas en lo que los humanos no lo son es la raz\'on por la cual usted debe desarrollar la destreza de hablar el ``lenguage de computadora''. Una vez que aprenda este lenguage ver\'a c\'omo puede delegar tareas miniales a su socia (la computadora), liberando as\'i su tiempo para hacer aquellas cosas para las que ha sido creado de manera especial. Usted aporta creatividad, intuici\'on e inventividad a esta relaci\'on colaborativa.  
+
+\section{Creatividad y motivaci\'on}
+
+Aunque este libro no est\'a dirigido a programadores profesionales, la programaci\'on puede ser un trabajo muy gratificante tanto personal como financieramente. 
+Elaborar programas \'utiles, elegantes e inteligentes para el beneficio de otros es una actividad muy creativa. Su computadora o Asistente Personal Digital (PDA por sus siglas en ingl\'es) 
+generalmente contiene diferentes programas de diferentes programadores, cada uno de ellos compitiendo por su atenci\'on e inter\'es. Ellos tratan de hacer lo mejor para satisfacer sus necesidades y proveerle una excelente experiencia de usuario, en el proceso. En algunas situaciones, cuando usted escoge una aplicaci\'on (software), los programadores son directamente compensados en virtud de su elecci\'on.
+
+Al considerar los programas como obras creativas de grupos de programadores, quiz\'a la siguiente imagen sea una versi\'on m\'as sensible de nuestro PDA:
+
+\beforefig
+\centerline{\includegraphics[height=1.00in]{figs2/pda2.eps}}
+\afterfig
+
+Por ahora, nuestra motivaci\'on primordial no es hacer dinero o complacer a los usuarios, sino hacernos m\'as productivos en el manejo de datos e informaci\'on que encontraremos en nuestra vida diaria.
+Cuando usted comience, usted es tanto programador como usuario de sus propios programas. En la medida en que adquiera m\'as destreza como programador y programar se sienta como una actividad m\'as y m\'as creativa para usted, se le ocurrir\'an ideas sobre el desarrollo de programas para otros.
+
+\section{Arquitectura del hardware de la computadora}
+\index{hardware}
+\index{hardware!arquitectura}
+
+Antes de comenzar a aprender el lenguage necesario para darle instrucciones a las computadoras para desarrollar software, es necesario aprender una peque\~na cantidad sobre c\'omo se construyen las computadoras. Si usted desbaratara su computadoras o tel\'efono celular y mirara lo que hay dentro, encontar\'ia las siguientes partes:
+
+\beforefig
+\centerline{\includegraphics[height=2.50in]{figs2/arch.eps}}
+\afterfig
+
+Las definiciones funcionales de alto nivel de estas partes son las siguientes:
+
+\begin{itemize}
+
+\item La {\bf Unidad Central de Procesamiento} conocida por sus siglas en ingl\'es como CPU es esa parte de la computadora que ha sido construida para obsesionarse con la cuesti\'on ``?`qu\'e hay que hacer despu\'es?''. Si su computadora tiene una capacidad de 3.0 Gigahertz, eso significa que el CPU preguntar\'a ``?`qu\'e hay que hacer despu\'es?''
+tres mil millones de veces por segundo. Usted va a tener que aprender c\'omo hablar r\'apido para mantener el ritmo de la CPU.
+
+\item La {\bf Memoria Principal} se usa para almacenar la informaci\'on
+que la CPU necesita de af\'an. La memoria principal es casi tan r\'apida como la CPU, pero la informaci\'on almacenada en la memoria principal desaparece cuando se apaga la computadora.
+
+\item La {\bf Memoria Secundaria} tambi\'en se usa para almacenar informaci\'on, pero es mucho m\'as lenta que la memoria principal.
+La ventaja de la memoria secundaria es que puede almacenar informaci\'on aun cuando la computadora est\'e apagada. Ejemplos de la memoria secundaria son los discos duros o memorias flash (esto se encuentran t\'ipicamente en dispositivos USB y reproductores de m\'usica portables).
+
+\item Los {\bf Dispositivos de entrada y salida (Input y Output)} son su monitor, teclado, mouse, microf\'ono, parlantes, tablero t\'actil integrado, etc.  
+Estos representan todas las formas en que interactuamos con la computadora.
+
+\item Hoy en d\'ia la mayor\'ia de las computadoras tambi\'en tienen
+{\bf Conexi\'on a la Red (Network Connection)} para recibir informaci\'on por medio de una red.
+Se puede pensar de una red como un lugar muy lento para almacenar y recuperar datos que pordr\'ian no estar siempre ``actualizados''. En cierto sentido, la red es m\'as lenta y a veces una forma poco fiable de
+{\bf Memoria Secundaria}.
+\end{itemize}
+
+Mientras que la mayor\'ia de los detalles sobre c\'omo trabajan estos componentes es mejor dej\'arselo a los  que construyen computadoras, conocer la terminolog\'ia ayuda para podernos referir a estos componentes cuando escribimos nuestros programas.
+
+Como programador, su trabajo es utilizar y coordinar cada uno de estos recursos para dar soluci\'on a los problemas para los cuales usted necesita analizar los datos que necesita usar. Como programador usted va a ``hablarle'' la mayor\'ia del tiempo a la CPU para decirle ``qu\'e debe hacer despu\'es''. Algunas veces usted le va a decir a la CPU que utilice la memoria principal, la memoria secundaria, la red o los dispositivos de entrada/salida (input/output).
+
+\beforefig
+\centerline{\includegraphics[height=2.50in]{figs2/arch2.eps}}
+\afterfig
+
+Usted tiene que ser la persona que le responda a la CPU la pregunta ``?`Qu\'e debe hacer despu\'es?'', pero ser\'ia muy inc\'omodo reducirlo a usted a un tama\~no de 5mm e insertarlo en la computadora solo para poder emitir un comando tres mil millones de veces por segundo. As\'i que en vez de hacer eso, usted debe escribir sus instrucciones de antemano.
+A estas instrucciones almancenadas les llamamos {\bf programa} y al acto de escribir estas instrucciones y escribirlas correctamente, {\bf programaci\'on}.
+
+\section{Comprender el concepto de programaci\'on}
+
+En el resto de este libro vamos a tratar de convertirlo a usted en una persona
+con destreza en el arte de programaci\'on. Al final, usted ser\'a un 
+{\bf programador} --- quiz\'a no un programador profesional, pero por lo menos tendr\'a las destrezas para mirar un problema de an\'alisis de informaci\'on y datos y desarrollar un programa como soluci\'on al problema.
+
+\index{resoluci\'on de problemas}
+
+En un sentido, usted necesita dos destrezas para ser programador:
+
+\begin{itemize}
+
+\item Primero, usted necesita saber el lenguage de programaci\'on (Python) -
+usted necesita saber el vocabulario y la gram\'atica. Usted necesita ser capaz de deletrear las palabras en este nuevo lenguage apropiadamente y saber c\'omo construir ``oraciones'' bien formadas en este nuevo lenguage.
+
+\item Segundo, usted necesita ``contar una historia''. Al escribir una historia,
+usted combina palabras y oraciones para transmitirle al lector una idea. Componer una historia requiere de destreza y arte, y la destreza de escribir se mejora escribiendo y recibiendo retroalimentaci\'on. En programaci\'on, nuestro programa es la ``historia'' y el problema que usted trata de resolver es la ``idea''.
+
+\end{itemize}
+
+Una vez que usted aprende un programa como Python, encontrar\'a mucho m\'as f\'acil aprender un segundo lenguage de programaci\'on como JavaScript o C++. El nuevo lenguage de programaci\'on tiene un vocabulario y gram\'atica muy diferente, pero una vez que adquiera destreza en la resoluci\'on de problemas, las destrezas van a ser las mismas para todos los lenauages de programaci\'on.
+
+Usted aprender\'a el ``vocabulario'' y ``oraciones'' de Python bien r\'apido.
+Le tomar\'a m\'as tiempo aprender a escribir un programa coherente para resolver un problema nuevo. Ense\~namos programaci\'on como ense\~namos escritura. Empezamos leyendo y explicando programas y despu\'es escribimos programas sencillos para luego escribir programas m\'as complejos, en el transcurso del tiempo.
+En alg\'un momento usted encuentra ``su inspiraci\'on'' y comienza a descubrir patrones usted mismo y puede ver de manera m\'as natural c\'omo tomar un problema y escribir un programa para darle una soluci\'on, y una vez que llegue a ese punto, la programaci\'on se convierte en un proceso agradable y creativo.  
+
+Comenzamos con el vocabulario y la estructura de los programas de Python. Tenga paciencia cuando la sencillez de los ejemplos le recuerden cuando comenz\'o a leer por primera vez. 
+
+\section{Palabras y oraciones}
+\index{lenguage de programaci\'on}
+\index{lenguage!programaci\'on}
+
+A diferencia del lenguage humano, el vocabulario de Python es realmente peque\~no. A este ``vocabulario''se le llama ``palabras reservadas''. Estas son palabras que tienen un significado muy especial para Python. Cuando Python ve estas palabras en un programa de Python, ellas tienen un solo significado para Python. M\'as adelante, en la medida en que usted vaya escribiendo programas, usted va a crear sus propias palabras, que guardan un significado espec\'ifico para usted, llamadas {\bf variables}. Usted tendr\'a una gran latitud al escoger nombres para sus variables, pero no podr\'a usar ninguna de las palabras reservadas para Python como nombre de variables.
+
+En un sentido, cuando entrenamos un perro, usamos palabras especiales como ``si\'entese'', ``quedese ah\'i'', y ``recoja''. Tambi\'en, cuando usted le habla a un perro y no utiliza ninguna de estas palabras reservadas, el perro lo mira con una mirada de asombro en la cara hasta que usted diga una de las palabras reservadas.  
+Por ejemplo, si usted dice ``Ojal\'a que m\'as gente camine para mejorar su salud'', 
+lo m\'as seguro que escucha un perro es ``bla bla bla {\bf camine} bla bla bla bla.''
+Esto es debido a que ``camine'' es una palabra reservada en el lenguage de un perro. Muchos sugerir\'ian que el lenguage entre humanos y gatos no tiene palabras reservadas\footnote{\url{http://xkcd.com/231/}}.
+
+Las palabras reservadas en el lenguage con que los humanos le hablan a 
+Python incluye las siguientes:
+
+\beforeverb
+\begin{verbatim}
+and       del       from      not       while    
+as        elif      global    or        with     
+assert    else      if        pass      yield    
+break     except    import    print              
+class     exec      in        raise              
+continue  finally   is        return             
+def       for       lambda    try
+\end{verbatim}
+\afterverb
+%
+Eso es todo, y a diferencia del perro, Python ya est\'a completamente entrenado.
+Cuando usted dice ``try'', Python va a tratar cada vez que usted lo diga sin fallar.
+
+Aprenderemos estas palabras reservadas y c\'omo se usan en el momento apropiado, pero por ahora nos enfocaremos en el equivalente al ``idioma'' de Python en t\'erminos relacionados al leguage como vimos entre la comunicaci\'on humano-perro en el ejemplo anterior. Lo bueno de pedirle a Python que hable es que podemos aun decirle qu\'e decir d\'andole un mensaje entre comillas:
+
+\beforeverb
+\begin{verbatim}
+print 'Hello world!'
+\end{verbatim}
+\afterverb
+
+Y ya hemos escrito nuestra primera oraci\'on sit\'acticamente correcta en Python.
+Nuestra oraci\'on comienza con la palabra reservada {\bf print} seguida de una cadena \textit{string} que nosotros mismos escojamos, encerrada en comillas simples.
+
+\section{Conversaci\'on con Python}
+
+Ahora que ya sabemos una palabra y una oraci\'on sencilla  en Python,
+necesitamos saber c\'omo se comienza una conversaci\'on con Python para probar 
+nuestras destrezas de lenguage.
+
+Antes de que pueda conversar con Python, usted primero debe instalar la aplicaci\'on de Python
+(software) en su computadora y aprender c\'omo iniciar Python en ella. Esto es demasiado detalle para este cap\'itulo, as\'i que le sugiero que consulte \url{www.pythonlearn.com} donde he detallado instrucciones e im\'agenes de pantalla para mostrar c\'omo se instala Python 
+en los sistemas Macintosh y Windows. En alg\'un momento, usted va a estar en 
+una terminal o ventana de comando y va a escribir {\bf python} y el int\'erprete 
+de Python va a comenzar a ejecutar los comandos en modo interactivo 
+y le va a aparecer algo as\'i:
+\index{interactive mode}
+
+\beforeverb
+\begin{verbatim}
+Python 2.6.1 (r261:67515, Jun 24 2010, 21:47:49) 
+[GCC 4.2.1 (Apple Inc. build 5646)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 
+\end{verbatim}
+\afterverb
+%
+El indicador {\tt >>>} es la manera en que el int\'erprete de Python le pregunta a usted ``?`Qu\'e quiere que haga despu\'es?''. Python est\'a listo para tener una conversaci\'on con usted. Lo que tiene que saber es c\'omo hablar en el lenguage de Python y usted podr\'a sostener una conversaci\'on.
+
+Vamos a decir por ejemplo que usted no sab\'ia ni la m\'as m\'inima palabra u oraci\'on. Es posible que quisiera utilizar la frase est\'andar que usan los astronautas cuando aterrizan en un planeta lejano y tratan de hablar con los habitantes de ese planeta:
+
+\beforeverb
+\begin{verbatim}
+>>> Yo vengo en plan de paz, favor llevarme a su autoridad 
+  File "<stdin>", line 1
+    Yo vengo en plan de paz, favor llevarme a su autoridad
+         ^
+SyntaxError: invalid syntax
+>>> 
+\end{verbatim}
+\afterverb
+%
+Esto no va bien. A menos que se le ocurra algo r\'apido, los habitantes de ese planeta lo pueden atacar con sus espadas, ensartarlo en un palo, cocinarlo en fuego, y com\'erselo a la cena.
+
+Por fortuna, usted llevaba una copia de este libro en su viaje y buscando lleg\'o exactamente a esta p\'agina e intent\'o nuevamente:
+
+\beforeverb
+\begin{verbatim}
+>>> print 'Hello world!'
+Hello world!
+\end{verbatim}
+\afterverb
+%
+Esto se ve mucho mejor, as\'i que trata de comunicarse un poco m\'as:
+
+\beforeverb
+\begin{verbatim}
+>>> print 'Usted debe ser el legendario dios que viene del cielo'
+Usted debe ser el legendario dios que viene del cielo
+>>> print 'Los hemos estado esperando por mucho tiempo'
+Los hemos estado esperando por mucho tiempo
+>>> print 'Nuestra leyenda dice que ustedes saben muy rico con mostaza'
+Nuestra leyenda dice que ustedes saben muy rico con mostaza
+>>> print 'Tendremos un banquete esta noche a menos que ustedes digan
+  File "<stdin>", line 1
+    print 'Tendremos un banquete esta noche a menos que ustedes digan
+                                                     ^
+SyntaxError: EOL while scanning string literal
+>>> 
+\end{verbatim}
+\afterverb
+%
+La conversaci\'on iba bien, pero cometi\'o un errorcito al usar el lenguage de Python y Python 
+le sac\'o las u\~nas.
+
+A este punto, usted debe haber ca\'ido en cuenta que aunque Python 
+es inmensamente complejo y poderoso, y muy quisquilloso en relaci\'on a la sintaxis con la que se debe comunicar con \'el, Python {\em 
+no} es inteligente. Usted est\'a sosteniendo una conversaci\'on con usted mismo, pero utilizando una sintaxis apropiada.
+
+En este sentido, cuando usted usa un programa escrito por otra persona, la conversaci\'on se da entre usted y esos otros programadores con Python actuando como intermediario.  Python
+es una manera en que los creadores de programas expresan c\'omo se supone que la conversaci\'on debe proceder. Y en tan s\'olo unos cuantos cap\'itulos m\'as usted ser\'a uno de esos programadores que usan Python para hablar con los usuarios de su programa.
+
+Antes de cerrar nuestra primera conversaci\'on con el int\'erprete de Python, usted probablemente deba aprender cu\'al es la manera apropiada de decir ``good-bye'' cuando interacciona con los habitantes del Planeta Python:
+
+\beforeverb
+\begin{verbatim}
+>>> good-bye
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'good' is not defined
+
+>>> if you don't mind, I need to leave
+  File "<stdin>", line 1
+    if you don't mind, I need to leave
+             ^
+SyntaxError: invalid syntax
+
+>>> quit()
+\end{verbatim}
+\afterverb
+%
+Usted notar\'a que el error es diferente en los dos primeros intentos. El segundo error es diferente porque 
+{\bf if} es una palabra reservada y Python vi\'o la palabra reservada y pens\'o que usted estaba tratando de decirle algo, pero la sintaxis de la oraci\'on no era correcta.
+
+La manera apropiada de decirle ``good-bye'' a Python es escribiendo  
+{\bf quit()} en los s\'imbolos de la terminal que aparecen as\'i {\tt >>>}.
+Le hubiera tomado bastante adivinar eso, as\'i que tener el libro a la mano probablemente le resultar\'a \'util.
+
+\section{Terminolog\'ia: int\'erprete y compilador}
+
+Python es un lenguage de {\bf alto nivel} cuya intenci\'on es hacerlo relativamente sencillo para ser le\'ido y escrito por humanos y para que las computadoras 
+lo lean y lo procesen. Otros lenguages de alto nivel incluyen Java, C++,
+PHP, Ruby, Basic, Perl, JavaScript, y muchos otros. El hardware dentro de la Unidad
+Central de Procesamiento (CPU por sus siglas en ingl\'es) no entiende ninguno de estos lenguages de alto nivel.
+
+La CPU comprende un lenguage que se conoce como {\bf machine-language} o lenguage de m\'aquina. El Lenguage de M\'aquina es muy simple y francamente muy agotador para escribir porque se representa por ceros y unos:
+
+\beforeverb
+\begin{verbatim}
+01010001110100100101010000001111
+11100110000011101010010101101101
+...
+\end{verbatim}
+\afterverb
+%
+El Lenguage de M\'aquina se ve muy sencillo por encima, dado que consiste solo de ceros y unos, pero su sintaxis es aun muy compleja y mucho m\'as elaborada que Python. As\'i que muy pocos programadores escriben en lenguage de m\'aquina. En lugar de eso, lo que hacemos es construir varios traductores que le permitan a los programadores escribir en lenguages de alto nivel como Python o JavaScript
+y estos traductores convierten los programas a lenguage de m\'aquina para la ejecuci\'on de los programas en la CPU.
+
+Siendo que el lenguage de m\'aquina est\'a asociado al hardware de la computadora, el lenguage de m\'aquina no es {\bf portable} a trav\'es de los diferentes tipos de hardware. Los Programas escritos en lenguages de 
+alto nivel se pueden mover entre las diferentes computadoras usando un int\'erprete diferente en la nueva computadora o al recopilar el c\'odigo para crear una versi\'on de lenguage de m\'aquina del programa que se pretende usar en otra computadora diferente.
+
+Estos int\'erpretes de lenguages de programaci\'on se ubican en dos categorias generales:
+(1) int\'erpretes y (2) compiladores.
+
+Un {\bf int\'erprete} lee el c\'odigo fuente del programa como ha sido escrito por el
+programador, analiza el c\'odigo e interpreta las instrucciones al instante.
+Python es un int\'erprete y cuando estamos ejecutando la aplicaci\'on Python, interactivamente, 
+podemos escribir una l\'inea de Python (una oraci\'on) y Python la procesa de inmediato,
+y queda listo para que nosotros escribamos otra l\'inea en Python.   
+
+Algunas de las l\'ineas en Python le dicen a Python que usted quiere que recuerde algunos valores para m\'as tarde. Necesitamos escoger un nombre para almacenar ese valor en memoria y podemos usar ese nombre simb\'olico para recuperar el valor m\'as tarde. Usamos el t\'ermino {\bf variable} para referirnos al nombre con el cual se almacenan esos datos.
+
+\beforeverb
+\begin{verbatim}
+>>> x = 6
+>>> print x
+6
+>>> y = x * 7
+>>> print y
+42
+>>> 
+\end{verbatim}
+\afterverb
+%
+En este ejemplo, le pedimos a Python que recuerde el valor seis y que se lo asigne a {\bf x}
+de modo que podamos recuperar el valor m\'as tarde. Verificamos que en efecto Python ha recordado el valor usando {\bf print}. Luego le pedimos a Python que recupere {\bf x} y lo multiplique por siete y que ponga el nuevo valor asign\'andoselo a {\bf y}. Despu\'es le pedimos a Python que imprima el valor actual en {\bf y}.
+
+Aunque estamos escribiendo estos comandos en Python una l\'inea a la vez, Python
+los trata como una secuencia ordenada de oraciones y es capaz de recuperar datos creados en frases escritas desde el principio. Estamos escribiendo nuestro primer p\'arrafo sencillo con cuatro oraciones en un orden l\'ogico y significativo.
+
+La naturaleza de un {\bf int\'erpreter} es ser capaz de mantener una conversaci\'on interactiva como se muestra arriba. Un {\bf compilador} necesita que se le entregue el programa entero en un archivo y luego lo procesa para traducirlo al c\'odigo de fuente de alto nivel en lenguage de m\'aquina, despu\'es, el compilador pone el lenguage de m\'aquina resultante en un archivo para ser ejecutado m\'as tarde.
+
+Si usted tiene un sistema Windows, a menudo estos programas ejecutables de lenguage de m\'aquina tienen un sufijo ``.exe'' o ``.dll'' que significa ``ejecutable'' y ``biblioteca dinamicamente cargable'', respectivamente. En Linux y Macintosh no hay sufijo que indentifique un archivo como ejecutable.
+
+Si usted abriera un archivo ejecutable en un editor de texto, ver\'ia algo completamente ilegible:
+
+\beforeverb
+\begin{verbatim}
+^?ELF^A^A^A^@^@^@^@^@^@^@^@^@^B^@^C^@^A^@^@^@\xa0\x82
+^D^H4^@^@^@\x90^]^@^@^@^@^@^@4^@ ^@^G^@(^@$^@!^@^F^@
+^@^@4^@^@^@4\x80^D^H4\x80^D^H\xe0^@^@^@\xe0^@^@^@^E
+^@^@^@^D^@^@^@^C^@^@^@^T^A^@^@^T\x81^D^H^T\x81^D^H^S
+^@^@^@^S^@^@^@^D^@^@^@^A^@^@^@^A\^D^HQVhT\x83^D^H\xe8
+....
+\end{verbatim}
+\afterverb
+%
+No es f\'acil leer o escribir en lenguage de m\'aquina por eso es bueno tener 
+{\bf int\'erpretes} y {\bf compiladores} que nos permiten escribir en un lenguage de alto nivel
+como Python o C.
+
+As\'i que en este punto de nuestra discusi\'on sobre compiladores e int\'erpretes, usted debe estarse  
+preguntando lo mismo sobre el int\'erprete de Python. ?`En qu\'e language est\'a escrito?  
+`?Ha sido escrito para en un leguage para compilar? ?`Qu\'e es exactamente lo que ocurre cuando escribimos ``python''?
+
+El int\'erprete de Python est\'a escrito en un lenguage de alto nivel ``C''.  
+Usted puede buscar la fuente misma del c\'odigo llendo a \url{www.python.org} y buscar el c\'odigo fuente.
+As\'i que Python mismo es un programa y se compila en c\'odigo de m\'aquina, y cuando usted instal\'o Python en su computadora (o quien se la vendi\'o lo instal\'o),
+usted copi\'o una copia del c\'odigo de m\'aquina del programa de Python traducido al sistema de su computadora. En Windows el c\'odigo de m\'aquina de Python que lo ejecuta debe estar en un archivo que aparece as\'i:
+
+\beforeverb
+\begin{verbatim}
+C:\Python27\python.exe
+\end{verbatim}
+\afterverb
+%
+Esto es m\'as de lo que usted realmente necesita saber para convertirse en un programador de Python, pero
+algunas veces vale la pena contestar esas pequen\~nas inquietudes desde el comienzo.
+
+\section{Escribir un programa}
+
+Escribir comandos en el int\'erprete de Python es una excelente forma de experimentar con las herramientas que ofrece Python, pero no se recomienda hacerlo para resolver problemas complejos.
+
+Cuando queremos escribir un programa, utilizamos un editor de texto para escribir las instrucciones en un archivo que Python pueda leer al cual se le da el nombre de {\bf script}. Tradicionalmente los ``scripts'' en Python terminan con {\tt .py}.
+
+\index{script}
+
+Para ejecujar el ``script'', usted debe decirle al int\'erprete de Python cu\'al es el nombre del archivo.  
+En la terminal de Unix o Windows, usted escribe el comando {\tt python hello.py} de la siguiente manera:
+
+\beforeverb
+\begin{verbatim}
+csev$ cat hello.py
+print 'Hello world!'
+csev$ python hello.py
+Hello world!
+csev$
+\end{verbatim}
+\afterverb
+%
+El ``csev\$'' es el indicador del sistema operativo, y ``cat hello.py'' nos muestra que el archivo 
+``hello.py'' tiene un programa Pytnon de una l\'inea para imprimir una frase (string).
+
+Llamamos al int\'erprete de Python y le decimos que lea el c\'odigo fuente del archivo
+``hello.py'' en vez de entrar las l\'ineas de c\'odigo interactivamente.
+
+Usted observar\'a que no hubo necesidad de escribir {\bf quit()} al final del arcivo del programa 
+en Python. Cuando Python est\'a leyendo el c\'odigo fuente de un archivo, sabe que tiene que parar cuando llega al final del archivo.
+
+\section{?`Qu\'e es un programa?}
+
+La definici\'on de un {\bf programa} al nivel m\'as b\'asico significa una secuencia de afirmaciones en Python creadas para hacer algo.
+Aun nuestro simple ``script'' {\bf hello.py}  es un programa. Es un programa de una l\'inea y no es particularmente \'util, pero en su estricta definici\'on, es un programa en lenguage Python.
+
+Puede ser que sea m\'as f\'acil entender lo que es un programa pensando en un problema para el cual se cree un programa que lo pueda resolver, y luego ver el programa que resolver\'ia ese problema.
+
+Digamos que usted est\'a realizando una investigaci\'on sobre Computaci\'on a nivel social en los mensajes de Facebook y usted est\'a interesado en averiguar cu\'al es la palabra m\'as usada en una serie de mensajes.
+Usted podr\'ia imprimir toda la cadena de mensajes de facebook y destilar todo el texto al buscar la palabras m\'as com\'unes, pero eso le tomar\'ia mucho tiempo y ser\'ia muy f\'acil cometer errores. Ser\'ia m\'as inteligente escribir un programa en Python para manejar la tarea m\'as r\'apida y precisa de modo que pueda pasar el fin de semana haciendo algo m\'as divertido.
+
+Por ejemplo mire el siguiente texto sobre un payaso y un carro. Mire el texto y encuentre la palabra m\'as com\'un y cu\'antas veces aparece.
+
+\beforeverb
+\begin{verbatim}
+el payaso corre tras el carro 
+y el carro corre a la carpa 
+y la carpa cae sobre el payaso 
+y el carro
+\end{verbatim}
+\afterverb
+%
+Despu\'es imag\'inese que usted est\'e haciendo esta tarea buscando en millones de l\'ineas de texto. 
+Francamente ser\'ia m\'as r\'apido que usted aprenda Python y escriba un programa en Python para contar las palabras, que darle un vistazo a las palabras.
+
+La mejor noticia es que yo ya escrib\'i un programa sencillo para encontrar la palabra m\'as com\'un en un archivo de texto. Yo lo escrib\'i, lo verifiqu\'e y ahora se lo doy a usted para que lo utilice y ahorre tiempo.
+
+\beforeverb
+\begin{verbatim}
+name = raw_input('Enter file:')
+handle = open(name, 'r')
+text = handle.read()
+words = text.split()
+counts = dict()
+
+for word in words:
+   counts[word] = counts.get(word,0) + 1
+
+bigcount = None
+bigword = None
+for word,count in counts.items():
+    if bigcount is None or count > bigcount:
+        bigword = word
+        bigcount = count
+
+print bigword, bigcount
+\end{verbatim}
+\afterverb
+%
+Usted nisiquiera tiene que saber Python para usar este programa. Usted tendr\'a que llegar al cap\'itulo 10 de este libro para entender completamente las maravillosas t\'ecnicas de Python que se usaron para escribir ese programa. Usted es el usuario, simplemente use el programa y marav\'illese de la inteligencia del lenguage y c\'omo le ahorra tiempo y esfuerzo.
+Usted simplemente escribe el c\'odigo en un archivo y le da el nombre de  
+{\bf words.py} lo ejecuta, o puede bajar el archivo de \url{http://www.pythonlearn.com/code/} para ejecutarlo.
+
+\index{program}
+Este es un buen ejemplo de c\'omo Python y el lenguage Python act\'uan como intermediarios entre usted
+como (usuario) y yo como (programador). Python es una manera para que nosotros intercambiemos instrucciones secuenciales \'utiles (i.e. programas) en un lenguage com\'un que pueden ser usadas por cualquiera que instale Python en su computadora. As\'i que ninguno de nosotros est\'a hablando con {\em Python},
+sino que nos comunicamos {\em a trav\'es} de Python.
+
+\section{Los bloques de construcci\'on de un programa}
+
+En los pro\'oximo cap\'itulos, aprenderemos m\'as sore el vocabulario, estructura de las frases, estructura de los p\'arrafos y la estructura de Python. Aprenderemos sobre las poderosas capacidades de Python y c\'omo aprovechar esas capacidades en la creaci\'on de programas \'utiles.
+
+Hay algunos patrones conceptuales de bajo nivel que se usan para escribir programas. Estos no son solo para programas en Python, son parte de todo lenguage de programaci\'on desde lenguage de m\'aquina hasta lenguages de alto nivel.
+
+\begin{description}
+
+\item[input:] Toma datos del ``mundo exterior''. Esto puede ser leer datos de un archivo o quiz\'a un tipo de sensor como un micr\'ofono o GPS. En nuestros programas iniciales, nuestro ``input'' vendr\'a del teclado del usuario al escribir.
+
+\item[output:] Desplegar los resultado del programa en la pantalla o almacenarlos en un archivo, o quiz\'a escribirlos en un dispositivo como parlante de m\'usica o texto de voz.
+
+\item[exjecuci\'on sequential:] Realizar enunciados uno tras otro en el orden que los encuentre en el gui\'on.
+
+\item[exjecuci\'on condicional:] Revisar ciertas condiciones y ejecutar o saltar un secuencia de enunciados.
+
+\item[exjecuci\'on repetida:] Realizar alguna serie de enunciados repetidamente, generalmente con alguna variaci\'on.
+
+\item[reuso:] Escribir una serie de instrucciones una sola vez y darles un nombre y despu\'es reusarlas en la medida en que se necesiten a lo largo del programa.
+
+\end{description}
+
+Pareciera que es demasiado simple para ser verdad y por supuesto que nunca las cosas resultan tan simple. Es como decir que caminar es simplemente
+``colocar un pies despu\'es del otro''. El ``arte'' 
+de escribir un programa es componer y enlazar estos elementos b\'asicos muchas veces seguidas para producir algo que sea de utilidad para los usuarios.
+
+El programa de contar palabras descrito arriba utiliza directamente todos estos patrones a excepci\'on de uno.
+
+\section{?`Qu\'e podr\'ia salir mal?}
+
+Como vimos en nuestras primeras conversaciones con Python, debemos ser muy precisos al comunicar cuando escribimos c\'odigo en Python. La m\'as m\'inima desviaci\'on o error causar\'a que Python no siga leyendo su programa.
+
+Los programadores principiantes a menudo toman el hecho de que Python no tiene tolerancia para errores como evidencia de que Python es mezquino, odioso y cruel.
+Mientras que pareciera que Python gusta de todos los dem\'as, Python los conoce personalmente y se reciente. Por este resentimiento, Python toma nuestro programa perfectamente escrito y lo rechaza como si no fuera ``id\'oneo'' solo para tormentarnos.
+
+\beforeverb
+\begin{verbatim}
+>>> primt 'Hello world!'
+  File "<stdin>", line 1
+    primt 'Hello world!'
+                       ^
+SyntaxError: invalid syntax
+>>> primt 'Hello world'
+  File "<stdin>", line 1
+    primt 'Hello world'
+                      ^
+SyntaxError: invalid syntax
+>>> I hate you Python!
+  File "<stdin>", line 1
+    I hate you Python!
+         ^
+SyntaxError: invalid syntax
+>>> if you come out of there, I would teach you a lesson
+  File "<stdin>", line 1
+    if you come out of there, I would teach you a lesson
+              ^
+SyntaxError: invalid syntax
+>>> 
+\end{verbatim}
+\afterverb
+%
+Nada se gana con argumentar con Python. Es una herramienta,
+no tiene emociones y est\'a feliz y listo para servirlo a usted cuando lo necesite. Sus mensajes de errores suenan cruel, pero son solo la manera de Python pedir ayuda. Ha mirado lo que usted ha escrito y sencillamente no puede entender lo que lee.
+
+Python es mucho m\'as como un perro, amoroso incondicionalemnte, que se comunica con unas pocas palabras clave que entiende, mir\;andolo con una mirada dulce en su cara ({\tt >>>}) y esperando que usted diga algo que pueda entender.
+Cuando Python dice ``SyntaxError: invalid syntax'', est\'a simplemente moviendo su cola y diciendo , ``Parece que usted est\'a diciendo algo, pero yo no entiendo lo que quiere decir, pero por favor siga hablando conmigo ({\tt >>>}).''
+
+En la medida que sus programas se vuelvan m\'as sofisticados, usted encontrar\'a tres tipos de errores en general:
+
+\begin{description}
+
+\item[Errores sint\'acticos:] Estos son los primeros errores que usted har\'a y los m\'as f\'aciles de arreglar. Un error sint\'actico (syntax error) significa que usted ha violado las reglas de ``gram\'atica'' de Python.
+Python hace lo mejor que puede para mostrar la l\'inea y letra donde nota que hay un problema. La \'unica parte complicada de los errores sint\'acticos es que algunas veces el error que se necesita corregir est\'a realmente m\'as arriba de donde Python 
+{\em muestra} que hubo un error. As\'i que la l\'inea y la letra que Python indica en donde se encuentra el error sint\'actico (syntax error) puede ser solo un punto de partida para su investigaci\'on.
+
+\item[Errores de l\'ogica:] Un error de l\'ogica es cuando su programa est\'a bien sint\'acticamente pero hay un error en el orden de los enunciados o quiz\'as un error en la relaci\'on de los enunciados entre uno y uno. Un buen ejemplo de error de l\'ogica podr\'ia ser, ``tome agua de su botella de agua, pongala en su mochila, camine a la biblioteca y luego ponga la tapa en la botella.''
+
+\item[Errores de sem\'antica:] Un error de sem\'antica es cuando su descripci\'on de los pasos a tomar est\'a sint\'acticamente correcta pero y en el orden adecuado, pero hay simplemente un error en el programa. El programa est\'a perfectamente bien pero no hace los que usted {\em intentaba} que realizara. Un ejemplo simple ser\'ia si usted le da indicaciones a una persona para llegar a un restaurante y le dice, ``... cuando llegue a la intersecci\'on de la estaci\'on de gasolina, cruce a la izquierda y vaya una milla y el restaurante es un edificio rojo a su izquierda.'' Su amigo va tarde y lo llama a usted y le dice que est\'a en una finca y est\'a caminando alrededor de un establo sin ning\'un letrero de restaurante.  
+Luego usted pregunta si ``cruzaron a la izquierda o a la dereha en la estaci\'on de gasolina'' y la respuesta es, ``Yo segu\'i sus indicaciones al pie de la letra, las tengo escritas, dice que cruce a la izquierda y vaya una milla en la estaci\'on de gasolina.'' Luego, usted dice,
+``Lo siento, aunque mis indicaciones estaban sint\'acticamente correctas, lastimosamente conten\'ian un peque\~no error sem\'antico.'' 
+
+\end{description}
+
+Una vez m\'as, en los tres tipos de errores, Python est\'a meramente tratando de hacer lo mejor para darle los resultados que usted le ha pedido.
+
+\section{La jornada de aprendizaje}
+
+En la medida en que progrese en el resto del libro, no tenga miedo si los conceptos 
+parecen que no calzaran bien al principio. Cuando usted estaba aprendiendo a hablar, no era problema que los primeros a\~nos hiciera sonidos adorables, y era razonable si le tom\'o seis mese pasar de un vocabulario simple a frases simples y le tom\'o de 5 a 6 a\~nos m\'as pasar de frases a p\'arrafos y unos a\~nos m\'as para ser capaz de escribir una corta historia completa  sin ayuda.
+
+Queremos que aprenda Python mucho m\'as r\'apido, as\'i que lo ense\~namos todo a la vez a lo largo de los pr\'oximos cap\'itulos, pero es como aprender un nuevo idioma que toma tiempo aprender y entender antes de que se sienta natural.
+Eso lleva a cierta confusi\'on al visitar y revisitar temas para tratar de que usted vea el panorama completo mientras definimos los peque\~nos fragmentos que forman todo el panorama. Aunque el libro est\'a escrito de manera lineal y si usted est\'a tomando el curso, el progreso va a ser de modo lineal, la manera en que usted maneje el material puede ser no lineal. Mire hacia adelante o hacia atr\'as y lea con un toque ligero. Al seguir el material m\'as avanzado sin entender completamente los detalles, usted puede adquirir una mejor comprensi\'on del ``porqu\'e'' 
+de la programaci\'om. Al revisar material previo y aun volver a hacer los ejercicios que aparecen al principio, usted ver\'a que en verdad ha aprendido bastante material aun cuando el material que est\'e estudiando actualmente le parezca impenetrable.
+
+Generalmente cuando se est\'a aprendiendo el primer lenguage de programaci\'on, hay ciertos momentos maravillosos de luz donde usted puede contemplar la escultura despu\'es de haber estado martillando una roca.
+
+Si algo parece particularmente difícil, usualmente no tiene valor el quedarse en ello toda la noche y comenzarlo. Toma un descanso, una siesta, algo de comer, expl\'iquele a algui\'en la parte con la que est\'as teniendo problema (o quiz\'as a su perro), y luego regrese al asunto con una mirada refrescada. Le aseguro que una vez que aprenda los conceptos de programaci\'on en el libro, usted mirar\'a hacia atr\'as y ver\'a lo simple y elegante que era y que simplemente le tom\'o un poco de tiempo absorberlo.
+
+\section{Glosario}
+
+\begin{description}
+
+\item[bug:]  Un error en el programa.
+\index{bug}
+
+\item[unidad central de procesamiento:] El coraz\'on de la computadora. Es lo que ejecuta el ``software'' que escribimos; llamado tambi\'en ``CPU'' o ``procesador''.
+\index{central processing unit}
+\index{CPU}
+
+\item[compilar:]  Traducir un programa escrito en un lenguage de alto nivel en un de bajo nivel al mismo tiempo, en preparaci\'on para ser ejecutado m\'as adelante.
+\index{compile}
+
+\item[lenguage de alto nivel:]  Un lenguage de programaci\'on como Python dise\~ado para que sea f\'acil para los humanos leerlo.
+\index{high-level language}
+
+\item[modo interactivo:] Una forma de utilizar el int\'erprete de Python escribiendo comandos y expresiones en la terminal.
+\index{interactive mode}
+
+\item[interpretar:]  Ejecutar un programa en un lenguage de alto nivel traduciendo l\'inea por l\'inea.
+\index{interpret}
+
+\item[language de bajo nivel:]  Un lenguage de programaci\'on dise\~nado para que sea f\'acil para una computadora ejecutar; llamado tambi\'en ``c\'odigo de m\'aquina'' o
+``lenguage de ensamble .''
+\index{low-level language}
+
+\item[c\'odigo de m\'aquina:]  El lenguage de m\'as bajo nivel para software el cual es directamente ejecutado por unidad central de procesamiento
+(CPU).
+\index{machine code}
+
+\item[memoria principal:] Almacena programas y datos. La memoria principal pierde la informaci\'on cuando se desconecta la computadora o se apaga.
+\index{main memory}
+
+\item[parse:]  Examinar un programa y analizar la estructura sint\'actica.
+\index{parse}
+
+\item[portabilidad:]  Una propiedad de un programa que puede ser ejecutado en m\'as de un tipo de computadora.
+\index{portability}
+
+\item[orden de impresi\'on (print statement):]  Una instrucci\'on que causa que Python
+interprete un valor y lo despliegue en el monitor.
+\index{print statement}
+\index{statement!print}
+
+\item[resoluci\'on de problema:]  El proceso de formular un problema, encontrar una soluci\'on y expresar dicha soluci\'on.
+\index{problem solving}
+
+\item[programa:] Un serie de intrucciones que especifican una computaci\'on.
+\index{program}
+
+\item[prompt:] Cuando un programa despliega un mensaje y pausa para que el usuario escriba algo en el programa.
+\index{prompt}
+
+\item[memoria secundaria:] Almacena programas y datos y retiene la informaci\'on aun cuando se apaga la computadora o se desconecta. Generalmente es m\'as lenta que la memoria principal. Ejemplos de memoria secundaria incluyen los discos duros y las llaves USB.
+\index{secondary memory}
+
+\item[sem\'antica:]  El significado de un programa.
+\index{semantics}
+
+\item[error de sem\'antica:]   Un error en un programa que hace que el programa haga algo diferente a lo que el programador intentaba ejecutar.
+\index{semantic error}
+
+\item[c\'odigo fuente:]  Un programa en un lenguage de alto nivel.
+\index{source code}
+
+\end{description}
+
+\section{Ejercicios}
+
+
+\begin{ex}
+?`Cu\'al es la funci\'on de la memoria secundaria de una computadora?
+
+a) Ejecutar todas la computaci\'on y l\'ogica del programa\\
+b) Recuperar p\'aginas web de Internet\\
+c) Almacenar informaci\'on a largo plazo - aun m\'as all\'a de que se apague\\
+d) Tomar entradas por escrito del usuario 
+\end{ex}
+
+\begin{ex}
+?`Qu\'e es un programa?
+\end{ex}
+
+\begin{ex}
+?`Cu\'al es la diferencia entre compilador e int\'erprete?
+\end{ex}
+
+\begin{ex}
+?`Cu\'al de los siguientes contiene ''c\'odigo de m\'aquina'' (machine code)?
+
+a) El int\'erprete Python\\
+b) El teclado\\
+c) Archivo fuente en Python\\
+d) Un documento de procesador de palabras (word processing)
+\end{ex}
+
+\begin{ex}
+?`Q\'ue hay de malo en el siguiente c\'odigo?:
+
+\beforeverb
+\begin{verbatim}
+>>> primt 'Hello world!'
+  File "<stdin>", line 1
+    primt 'Hello world!'
+                       ^
+SyntaxError: invalid syntax
+>>> 
+\end{verbatim}
+\afterverb
+
+\end{ex}
+
+\begin{ex}
+?`D\'onde almacena la computadora una variable como "X" despu\'es de que  
+se termina la siguiente l\'inea Python?
+
+\beforeverb
+\begin{verbatim}
+x = 123
+\end{verbatim}
+\afterverb
+%
+a) Unidad central de procesamiento\\
+b) Memoria Principal\\
+c) Memoria Secundaria\\
+d) Dispositivo de entrada (Input Device)\\
+e) Dispositivo de salida (Output Device)
+\end{ex}
+
+\begin{ex}
+?`Qu\'e imprime el siguiente programa?:
+
+\beforeverb
+\begin{verbatim}
+x = 43
+x = x + 1
+print x
+\end{verbatim}
+\afterverb
+%
+a) 43\\
+b) 44\\
+c) x + 1\\
+d) Error porque x = x + 1 no es posible matem\'aticamente
+\end{ex}
+
+\begin{ex}
+Explique cada una de las siguientes utilizando un ejemplo de una capacidad humana: 
+(1) Unidad Central de Procesamiento, (2) Memoria Principal, (3) Memoria Secundaria, 
+(4) Dispositivo de entrada (Input Device), y 
+(5) Dispositivo de salida (Output Device).
+Por ejemplo, "?`Cu\'al es el equivalente humano de la Unidad Central de Procesamiento"? 
+\end{ex}
+
+\begin{ex}
+?`C\'omo se arregla un error sint\'actico, "Syntax Error"?
+\end{ex}
