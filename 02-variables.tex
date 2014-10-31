@@ -280,10 +280,8 @@ divisi\'on de punto flotante (floating-point division), y el resultado es un flo
 
 \section{Expresiones}
 
-An {\bf expression} is a combination of values, variables, and operators.
-A value all by itself is considered an expression, and so is
-a variable, so the following are all legal expressions
-(assuming that the variable {\tt x} has been assigned a value):
+Una {\bf expresi\'on} es una combinaci\'on de valores, variables y operadores.
+Un valor por s\'i mismo se considera una expresi\'on y as\'i mismo una variable, por esta raz\'on las siguientes son todas expresiones legales(asumiendo que a la variable {\tt x} se le ha asignada un valor):
 
 \index{expression}
 \index{evaluate}
@@ -296,8 +294,8 @@ x + 17
 \end{verbatim}
 \afterverb
 %
-If you type an expression in interactive mode, the interpreter
-{\bf evaluates} it and displays the result:
+Si usted escribe una expresi\'on en modo interactivo, el int\'erprete lo
+{\bf eval\'ua} y despliega el resultado:
 
 \beforeverb
 \begin{verbatim}
@@ -306,13 +304,10 @@ If you type an expression in interactive mode, the interpreter
 \end{verbatim}
 \afterverb
 %
-But in a script, an expression all by itself doesn't
-do anything!  This is a common
-source of confusion for beginners.
+Pero en un ``script'', una expresi\'on por s\'i misma no hace nada. Esto es una fuente de confusi\'on muy com\'un para principiantes.
 
 \begin{ex}
-Type the following statements in the Python interpreter to see
-what they do:
+Escriba la siguiente afirmaci\'on en el int\'erprete de Python para ver lo que hace:
 
 \beforeverb
 \begin{verbatim}
@@ -330,49 +325,38 @@ x + 1
 \index{rules of precedence}
 \index{PEMDAS}
 
-When more than one operator appears in an expression, the order of
-evaluation depends on the {\bf rules of precedence}.  For
-mathematical operators, Python follows mathematical convention.
-The acronym {\bf PEMDAS} is a useful way to
-remember the rules:
+Cuando aparece m\'as de un operador en una expresi\'on, el orden de evaluaci\'on depende de las reglas de las {\bf reglas de precedencia}.  Para operadores matem\'aticos, Python sigue convenci\'on matem\'atica.
+Las siglas {\bf PEMDAS} es una manera f\'acil de recordar las reglas:
 
 \index{parentheses!overriding precedence}
 
 \begin{itemize}
 
-\item {\bf P}arentheses have the highest precedence and can be used 
-to force an expression to evaluate in the order you want. Since
-expressions in parentheses are evaluated first, {\tt 2 * (3-1)} is 4,
-and {\tt (1+1)**(5-2)} is 8. You can also use parentheses to make an
-expression easier to read, as in {\tt (minute * 100) / 60}, even
-if it doesn't change the result.
+\item {\bf P}ar\'entesis tiene la m\'as alta precedencia y se puede usar para obligar una expres\'on a evaluar en el orden que usted quiere. Siendo que las expresiones entre par\'entesis se eval\'uan primero, , {\tt 2 * (3-1)} es 4,
+y {\tt (1+1)**(5-2)} es 8. Usted tambi\'en puede usar par\'entesis para hacer una expresi\'on m\'as f\'acil de leer, como en  {\tt (minute * 100) / 60}, aunque el resultado no cambie.
 
-\item {\bf E}xponentiation has the next highest precedence, so
-{\tt 2**1+1} is 3, not 4, and {\tt 3*1**3} is 3, not 27.
+\item {\bf E}xponenciaci\'on tiene la siguiente m\'as alta precedencia, as\'i que 
+{\tt 2**1+1} es 3, no 4, y {\tt 3*1**3} es 3, no 27.
 
-\item {\bf M}ultiplication and {\bf D}ivision have the same precedence,
-which is higher than {\bf A}ddition and {\bf S}ubtraction, which also
-have the same precedence.  So {\tt 2*3-1} is 5, not 4, and
-{\tt 6+4/2} is 8, not 5.
+\item {\bf M}ultiplicaci\'on y {\bf D}ivisi\'n tiene la misma precedencia,
+la cual es mayor que {\bf A}ddici\'n y {\bf S}ubtracci\'n, la que tambi\'en tiene igual precedencial. As\'i pues {\tt 2*3-1} es 5, no 4, y
+{\tt 6+4/2} es 8, no 5.
 
-\item Operators with the same precedence are evaluated from left to 
-right.  So in the expression {\tt 5-3-1} is 1, not 3 because the
-{\tt 5-3} happens first and then {\tt 1} is subtracted from {\tt 2}.
+\item Operadores con la misma precedencia son evaluados de izquierda a derecha. As\'i que la expresi\'on {\tt 5-3-1} es 1, no 3 porque el 
+{\tt 5-3} ocurre primero y luego {\tt 1} se substrae de {\tt 2}.
 
 \end{itemize}
 
-When in doubt always put parentheses in your expressions to make sure
-the computations are performed in the order you intend.
+Cuando tenga duda, siempre ponga par\'entesis en sus expresiones para asegurarse que la computaci\'on se realicen en el order que usted intenta.
 
-\section{Modulus operator}
+\section{Operador de m\'odulos (Modulus operator)}
 
 \index{modulus operator}
 \index{operator!modulus}
 
-The {\bf modulus operator} works on integers and yields the remainder
-when the first operand is divided by the second.  In Python, the
-modulus operator is a percent sign (\verb"%").  The syntax is the same
-as for other operators:
+El {\bf ``modulus operator''} trabaja en n\'umeros enteros y deja el residuo cuando el primer operando se divide por el segundo. En Python, el 
+``modulus operator'' es un signo de porcentaje (\verb"%").  The syntax is the same
+como para otros operadores:
 
 \beforeverb
 \begin{verbatim}
@@ -385,18 +369,15 @@ as for other operators:
 \end{verbatim}
 \afterverb
 %
-So 7 divided by 3 is 2 with 1 left over.
+De modo que 7 dividido por 3 es 2 con 1 de residuo.
 
-The modulus operator turns out to be surprisingly useful.  For
-example, you can check whether one number is divisible by another---if
-{\tt x \% y} is zero, then {\tt x} is divisible by {\tt y}.
+El ``modulus operator'' es sorpresivamente muy \'util. Por ejemplo, usted puede verificar si un n\'umero es divisible por otro---si
+{\tt x \% y} es cero, entonces {\tt x} es divisible por {\tt y}.
 
-\index{divisibility}
+\index{divisibilidad}
 
-Also, you can extract the right-most digit
-or digits from a number.  For example, {\tt x \% 10} yields the
-right-most digit of {\tt x} (in base 10).  Similarly {\tt x \% 100}
-yields the last two digits.
+Tambi\'en, usted puede extraer el d\'igito del extremo derecho del d\'igito o d\'igitos de un n\'umero. Por ejemplo, {\tt x \% 10} da el d\'igito del extremo derecho de {\tt x} (en base 10).  As\'i mismo {\tt x \% 100}
+da los dos \'ultimos d\'igitos.
 
 
 
@@ -404,12 +385,10 @@ yields the last two digits.
 \index{string!operation}
 \index{operator!string}
 
-The {\tt +} operator works with strings, but it
-is not addition in the mathematical sense. Instead it performs
-{\bf concatenation}, which means joining the strings by
-linking them end-to-end.  For example:
+El operador {\tt +} funciona con una cadena o ``strings'', pero no es suma en el sentido matem\'atico. Al contrario, realiza 
+{\bf concatenaci\'on}, lo que significa que une las cadenas lig\'andolas as\'i:
 
-\index{concatenation}
+\index{concatenaci\'on}
 
 \beforeverb
 \begin{verbatim}
@@ -424,9 +403,9 @@ linking them end-to-end.  For example:
 \end{verbatim}
 \afterverb
 %
-The output of this program is {\tt 100150}.
+El output de este programa es {\tt 100150}.
 
-\section{Asking the user for input}
+\section{Pedir al usuario ``input''}
 \index{keyboard input}
 
 Sometimes we would like to take the value for a variable from the user
