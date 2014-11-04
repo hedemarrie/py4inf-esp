@@ -446,14 +446,12 @@ El output de este programa es {\tt 100150}.
 
 \index{keyboard input}
 
-Sometimes we would like to take the value for a variable from the user
-via their keyboard.
-Python provides a built-in function called \verb"raw_input" that gets
-input from the keyboard\footnote{In Python 3.0, this function is named
-  {\tt input}.}.  When this function is called, the program stops and
-waits for the user to type something.  When the user presses {\sf
-  Return} or {\sf Enter}, the program resumes and \verb"raw_input"
-returns what the user typed as a string.
+Algunas veces vamos a tomar el valor para una variable del usuario mismo, valor que el usuario escribe usando el teclado.
+Python provee una funci\'on integrada llamada \verb"raw_input" que toma input del teclado\footnote{En Python 3.0, esta funci\'on se llama 
+  {\tt input}.}.  Cuando se llama esta funci\'on, el programa para y espera
+para que el usuario escriba algo. Cuando el usuario presiona {\sf
+  Return} o {\sf Enter}, el programa se reactiva y \verb"raw_input"
+devuelve lo que es usuario escribe como una cadena de palabras.
 
 \index{Python 3.0}
 \index{raw\_input function}
@@ -468,10 +466,7 @@ Some silly stuff
 \end{verbatim}
 \afterverb
 %
-Before getting input from the user, it is a good idea to print a
-prompt telling the user what to input.  You can pass a string
-to \verb"raw_input" to be displayed to the user before pausing
-for input:
+Antes de tomar el input del usuario, es una buena idea desplegar un mensaje indicando qu\'e debe escribir el usuario. Usted puede pasar una cadena de palabras o ``string'' a \verb"raw_input" para que lo desplegue al usuario antes de recibir el:
 
 \index{prompt}
 
@@ -485,14 +480,12 @@ Chuck
 \end{verbatim}
 \afterverb
 %
-The sequence \verb"\n" at the end of the prompt represents a {\bf newline},
-which is a special character that causes a line break.
-That's why the user's input appears below the prompt.
+La secuencia \verb"\n" al final representa una {\bf nueva l\'inea},
+la cual es un car\'acter especial que generera un nuevo corte de \'inea. Por esto lo que escribe el usuario aparece debajo.
 
-\index{newline}
+\index{newline o nueva l\'inea}
 
-If you expect the user to type an integer, you can try to convert
-the return value to {\tt int} using the {\tt int()} function:
+Si usted espera que el usuario escriba un n\'umero entero, usted puede tratar de convertir el valor escrito en {\tt int} usando la funci\'on {\tt int()}:
 
 \beforeverb
 \begin{verbatim}
@@ -507,8 +500,8 @@ What...is the airspeed velocity of an unladen swallow?
 \end{verbatim}
 \afterverb
 %
-But if the user types something other than a string of digits,
-you get an error:
+Pero si el usuario escribe otra cosa diferente a un ``string'' o cadena de d\'igitos,
+le va a salir un error:
 
 \beforeverb
 \begin{verbatim}
@@ -520,14 +513,14 @@ ValueError: invalid literal for int()
 \end{verbatim}
 \afterverb
 %
-We will see how to handle this kind of error later.
+Vamos a ver m\'as adelante c\'omo manejar este tipo de error.
 
 \index{ValueError}
 \index{exception!ValueError}
 
 
-\section{Comments}
-\index{comment}
+\section{Comentarios}
+\index{comment o comentario}
 
 As programs get bigger and more complicated, they get more difficult
 to read.  Formal languages are dense, and it is often difficult to
