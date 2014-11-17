@@ -1,18 +1,17 @@
 % LaTeX source for ``Python for Informatics: Exploring Information''
 % Copyright (c)  2010-  Charles R. Severance, All Rights Reserved
 
-\chapter{Conditional execution}
+\chapter{Ejecuci\'on condicional}
 
-\section{Boolean expressions}
-\index{boolean expression}
+\section{Expresiones booleanas }
+\index{boolean expression or expresiones booleanas}
 \index{expression!boolean}
-\index{logical operator}
+\index{logical operator u operador l\'ogico}
 \index{operator!logical}
 
-A {\bf boolean expression} is an expression that is either true
-or false.  The following examples use the 
-operator {\tt ==}, which compares two operands and produces
-{\tt True} if they are equal and {\tt False} otherwise:
+Una {\bf expresi\'on booleana} es una expresi\'on que es o falsa o verdadera. Los siguientes ejemplo utilizan el 
+operador {\tt ==}, el cual compara dos operandos y produce
+{\tt True} si son iguales y {\tt False} si no lo son:
 
 \beforeverb
 \begin{verbatim}
@@ -68,7 +67,7 @@ is to use a single equal sign ({\tt =}) instead of a double equal sign
 \index{operator!comparison}
 
 
-\section {Logical operators}
+\section {Operadores de l\'ogica}
 \index{logical operator}
 \index{operator!logical}
 
@@ -110,14 +109,14 @@ This flexibility can be useful, but there are some subtleties to
 it that might be confusing.  You might want to avoid it (unless
 you know what you are doing).
 
-\section{Conditional execution}
-\label{conditional execution}
+\section{Ejecuci\'on condicional}
+\label{conditional execution o ejecuci\'on condicional}
 
-\index{conditional statement}
+\index{conditional statement o afirmaciones condicionales}
 \index{statement!conditional}
-\index{if statement}
+\index{if statement o condicional si}
 \index{statement!if}
-\index{conditional execution}
+\index{conditional execution o ejecuci\'on condicional}
 
 In order to write useful programs, we almost always need the ability
 to check conditions and change the behavior of the program
@@ -187,10 +186,10 @@ Small
 \afterverb
 %
 
-\section{Alternative execution}
-\label{alternative execution}
+\section{Ejecuci\'on alternativa}
+\label{alternative execution o ejecuci\'on alternativa }
 
-\index{alternative execution}
+\index{alternative execution o ejecuci\'on alternativa}
 \index{else keyword}
 \index{keyword!else}
 
@@ -224,8 +223,8 @@ the alternatives will be executed.  The alternatives are called
 
 
 
-\section{Chained conditionals}
-\index{chained conditional}
+\section{Condicionales en cadena}
+\index{chained conditional o condicionales en cadena}
 \index{conditional!chained}
 
 Sometimes there are more than two possibilities and we need more than
@@ -276,8 +275,8 @@ ends.  Even if more than one condition is true, only the
 first true branch executes.  
 
 
-\section{Nested conditionals}
-\index{nested conditional}
+\section{Condicionales anidados}
+\index{nested conditional o condicionales anidados}
 \index{conditional!nested}
 
 One conditional can also be nested within another.  We could have
@@ -332,7 +331,7 @@ if 0 < x and x < 10:
 \afterverb
 
 
-\section{Catching exceptions using try and except}
+\section{Captaci\'on de excepciones utilizando ``try'' y ``except''}
 \label{catch1}
 
 Earlier we saw a code segment where we used the \verb"raw_input" and
@@ -448,8 +447,8 @@ prints an error message.  In general,
 catching an exception gives you a chance to fix the problem, or try
 again, or at least end the program gracefully.
 
-\section{Short circuit evaluation of logical expressions}
-\index{short circuit}
+\section{Evaluaci\'on de cortocircuito de expresiones l\'ogicas}
+\index{short circuit o cortocircuito}
 
 When Python is processing a logical expression such as 
 {\tt x >= 2 and (x/y) > 2}, it evaluates the expression
@@ -529,10 +528,10 @@ In the second expression, we say that {\tt y != 0} acts as a {\bf guard}
 to insure that we only execute {\tt (x/y)} if {\tt y} is non-zero.
 
 
-\section{Debugging}
-\label{whitespace}
-\index{debugging}
-\index{traceback}
+\section{Depuraci\'on}
+\label{whitespace o espacio en blanco}
+\index{debugging o depuraci\'on}
+\index{traceback o rastrear}
 
 The traceback Python displays when an error occurs contains
 a lot of information, but it can be overwhelming, especially
@@ -619,9 +618,9 @@ In general, error messages tell you where the problem was discovered,
 but that is often not where it was caused.
 
 
-\section{Glossary}
+\section{Glosario}
 
-\begin{description}
+\begin{descripci\'on}
 
 \item[body:] The sequence of statements within a compound statement.
 \index{body}
@@ -683,7 +682,7 @@ without needing to evaluate the rest of the expression.
 
 \end{description}
 
-\section{Exercises}
+\section{Ejercicios}
 
 \begin{ex}
 Rewrite your pay computation to give the employee 1.5 
