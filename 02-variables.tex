@@ -522,13 +522,11 @@ Vamos a ver m\'as adelante c\'omo manejar este tipo de error.
 \section{Comentarios}
 \index{comment o comentario}
 
-As programs get bigger and more complicated, they get more difficult
-to read.  Formal languages are dense, and it is often difficult to
-look at a piece of code and figure out what it is doing, or why.
+En la medidad que los programas se vuelvan m\'as grandes y m\'as complicados, se hace m\'as dif\'icil leerlos. El lenguage formal es denso y a vececes es dif\'icil mirar un segmento de c\'odigo y entender qu\'e hace o por qu\'e.
 
-For this reason, it is a good idea to add notes to your programs to explain
-in natural language what the program is doing.  These notes are called
-{\bf comments}, and they start with the \verb"#" symbol:
+Por esta raz\'on, una buena idea es agreagar notas a sus programas para explicar
+en un lenguage natural lo que hace el program. A estas notas se les llama
+{\bf comentarios} y comienzan con el s\'imbolo \verb"#":
 
 \beforeverb
 \begin{verbatim}
@@ -537,8 +535,7 @@ percentage = (minute * 100) / 60
 \end{verbatim}
 \afterverb
 %
-In this case, the comment appears on a line by itself.  You can also put
-comments at the end of a line:
+En este caso, el comentario aparece en una l\'inea por si solo. Tambi\'en se pueden poner comentarios al final de la l\'inea:
 
 \beforeverb
 \begin{verbatim}
@@ -546,14 +543,12 @@ percentage = (minute * 100) / 60     # percentage of an hour
 \end{verbatim}
 \afterverb
 %
-Everything from the {\tt \#} to the end of the line is ignored---it
-has no effect on the program.
+Todo lo que se encierre dentro de {\tt \#} desde el comienzo hasta el final de la l\'inea se ignora---no tiene ning\'un efecto en el programa.
 
-Comments are most useful when they document non-obvious features of
-the code.  It is reasonable to assume that the reader can figure out
-\emph{what} the code does; it is much more useful to explain \emph{why}.
+Los comentarios son mayormente \'utiles cuando documentan caracter\'isticas del c\'odigo que no son obvias a simple vista.  Es razonable asumir que el lector puede entender
+\emph{qu\'e} hace el c\'odigo; es mucho m\'as \'util explicar \emph{por qu\'e}.
 
-This comment is redundant with the code and useless:
+El siguiente comentario es redundante con el c\'odigo  y no ofrece ninguna utilidad:
 
 \beforeverb
 \begin{verbatim}
@@ -561,7 +556,7 @@ v = 5     # assign 5 to v
 \end{verbatim}
 \afterverb
 %
-This comment contains useful information that is not in the code:
+Este comentario contiene informaci\'on \'util que no se encuentra en el c\'odigo:
 
 \beforeverb
 \begin{verbatim}
@@ -569,13 +564,12 @@ v = 5     # velocity in meters/second.
 \end{verbatim}
 \afterverb
 %
-Good variable names can reduce the need for comments, but
-long names can make complex expressions hard to read, so there is
-a tradeoff.
+Tener buenos nombres de variables reduce la necesidad de comentarios, pero
+los nombres largos dificultan la lectura de expresiones complejas, as\'i que hay que elegir entre uno y otro.
 
-\section{Choosing mnemonic variable names}
+\section{Elecci\'on de nombres de variables mnemot\'ecnicos}
 
-\index{mnemonic}
+\index{mnemonic, mnemot\'ecnico}
 
 As long as you follow the simple rules of variable naming, and avoid
 reserved words, you have a lot of choice when you name your variables.
